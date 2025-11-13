@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Star } from "lucide-react";
+import { Star, ChevronDown, ChevronUp } from "lucide-react";
 
 const testimonials = [
   {
@@ -203,6 +203,86 @@ const testimonials = [
     text: "Nalin is an understanding, thorough and extremely helpful agent who can make home buying experience a pleasure. Highly recommended.",
     rating: 5,
     categories: ["First-Time Buyers", "Patient Service"]
+  },
+  {
+    title: "Perfect Home for Growing Family",
+    name: "Kim Ibarra",
+    location: "Toronto",
+    text: "We worked with Nalin to find a house for our growing family. Entering the Toronto Real Estate market was stressful and overwhelming, but Nalin was there every step of the way to help us find the perfect home. He took the time to really understand our needs and preferences, and to help us understand the bidding and buying process. He was super responsive and extremely quick to answer all of our many questions. For every house we were interested in, Nalin went above and beyond to get us helpful intel to inform our decision-making process.",
+    rating: 5,
+    categories: ["Family Homes", "Patient Service", "Market Knowledge"]
+  },
+  {
+    title: "Methodical and Efficient Search",
+    name: "Gregor Simeonov",
+    location: "Toronto",
+    text: "Even as a long time friend, Nalin was the upmost professional in our search for a new home. Patient, caring, genuine, always had our best interests in mind. From the beginning he helped us with a guided and methodical approach to make the searching process as efficient as possible. Once we narrowed in on our desired regions and budget, we worked collaboratively to find the best fit. Nalin is very passionate and dedicated, always available to chat, screen homes, chase information, through all hours of the day.",
+    rating: 5,
+    categories: ["Professional Service", "Patient Service", "Long-Term Support"]
+  },
+  {
+    title: "Kind and Experienced",
+    name: "Jennifer Pagliaro",
+    location: "Toronto",
+    text: "Nalin is as kind as he is experienced. He helped us buy our first home with so little stress we wondered why it wasn't harder. His analysis of market trends and approach to bidding put us at ease and we can't recommend him enough to anyone looking for a five-star experience.",
+    rating: 5,
+    categories: ["First-Time Buyers", "Market Knowledge", "Expert Guidance"]
+  },
+  {
+    title: "Never Led Us Astray",
+    name: "Jo Lee",
+    location: "Toronto",
+    text: "Working with Nalin was such a great experience. His expertise is evident by his professionalism and authenticity. He never led us astray and was very patient with us as we re-adjusted our expectations according to the market. We never felt pressure to purchase and he was always looking for potential listings that could be a good fit for us. We found the viewings and information provided by Nalin extremely thorough. Having worked with other realtors I can confidently say Nalin goes above and beyond to ensure you find the right place. He is not looking to make another sale, but find you the perfect home whatever your time line or budget is.",
+    rating: 5,
+    categories: ["Patient Service", "Professional Service", "Long-Term Support"]
+  },
+  {
+    title: "Patient Investment in Understanding Needs",
+    name: "Neil Datt",
+    location: "Toronto",
+    text: "We really enjoyed our home buying experience with Nalin. He's responsive and resourceful and not solely focused the 'sale'. With his patient investment on really understanding our needs upfront combined with his great attitude, we trusted he had always our best interests at heart. We would certainly recommend Nalin to friends and look forward to working with him again in the future.",
+    rating: 5,
+    categories: ["Patient Service", "Professional Service"]
+  },
+  {
+    title: "Caring and Thoughtful in Rental Process",
+    name: "Chloe Perelgut",
+    location: "Toronto",
+    text: "Couldn't have asked for a more caring and thoughtful agent in the rental/leasing process. Nalin was steadfast through changes in location parameters and helped both myself and my brother have a smooth and easy transition into leasing with a private landlord. His level of communication and explanation were invaluable to creating an easy and comfortable search for the perfect place.",
+    rating: 5,
+    categories: ["Rental Services", "Patient Service", "Professional Service"]
+  },
+  {
+    title: "Head and Shoulders Above the Rest",
+    name: "Jennifer Savage",
+    location: "Toronto",
+    text: "Nalin is a WONDERFUL agent!! As a property investor, I have worked with a lot of agents before. Nalin is head-and-shoulders above the rest! I was endlessly impressed by his level of professionalism, his commitment, his diligence, and his attention to detail. He is also funny and a positive person. You could not ask for a better agent to serve you.",
+    rating: 5,
+    categories: ["Professional Service", "Investment Properties"]
+  },
+  {
+    title: "Considerate and Scrupulously Professional",
+    name: "Min Lee",
+    location: "Toronto",
+    text: "It was a pleasure to work with Nalin for my first home purchase in Toronto. He was very considerate in his interactions and scrupulously professional in his work. In addition, his network of various professionals were there to support each step of the process and ensured everything proceeded very smoothly.",
+    rating: 5,
+    categories: ["First-Time Buyers", "Professional Service"]
+  },
+  {
+    title: "Welcoming to Newcomers",
+    name: "Thiago Tolentino Silva",
+    location: "Toronto",
+    text: "We had just arrived in Toronto from Brazil and needed to find an apartment in one month. Nalin was so nice and welcoming, he even got us tips about the city itself! He was great booking us the visits and, most importantly, giving us honest opinion on what he thought about the place. We visited a lot of units until we found exactly what we wanted! We are so happy about it.",
+    rating: 5,
+    categories: ["Rental Services", "Fast Closing", "Patient Service"]
+  },
+  {
+    title: "Elite Realtor with World-Class Service",
+    name: "Kirk Eaton",
+    location: "Toronto",
+    text: "If you are looking for an elite Realtor to help you find your next home then Nalin is your guy! Nalin is professional, highly knowledgeable and an expert negotiator while offering world-class service to his clients. He takes care of each client like they are family and truly has their best interests at heart.",
+    rating: 5,
+    categories: ["Professional Service", "Negotiation Skills", "Expert Guidance"]
   }
 ];
 
@@ -211,6 +291,17 @@ const categories = ["All", "First-Time Buyers", "Patient Service", "Market Knowl
 export const Testimonials = () => {
   const [showAll, setShowAll] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All");
+  const [expandedCards, setExpandedCards] = useState<Set<number>>(new Set());
+
+  const toggleExpanded = (index: number) => {
+    const newExpanded = new Set(expandedCards);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
+    }
+    setExpandedCards(newExpanded);
+  };
 
   const filteredTestimonials = activeCategory === "All" 
     ? testimonials 
@@ -245,35 +336,54 @@ export const Testimonials = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {displayedTestimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              className="bg-card border-border shadow-md hover:shadow-lg transition-all hover:-translate-y-1 animate-fade-in"
-              style={{ animationDelay: `${index * 50}ms` }}
-            >
-              <CardContent className="p-6">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                  ))}
-                </div>
-                <h3 className="text-lg font-bold text-foreground mb-3">
-                  {testimonial.title}
-                </h3>
-                <p className="text-foreground mb-6 italic line-clamp-4">
-                  "{testimonial.text}"
-                </p>
-                <div>
-                  <p className="font-semibold text-foreground">
-                    {testimonial.name}
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    {testimonial.location}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+          {displayedTestimonials.map((testimonial, index) => {
+            const isExpanded = expandedCards.has(index);
+            const needsExpand = testimonial.text.length > 200;
+            
+            return (
+              <Card
+                key={index}
+                className="bg-card border-border shadow-md hover:shadow-lg transition-all hover:-translate-y-1 animate-fade-in"
+                style={{ animationDelay: `${index * 50}ms` }}
+              >
+                <CardContent className="p-6">
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                    ))}
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-3">
+                    {testimonial.title}
+                  </h3>
+                  <div className="mb-4">
+                    <p className={`text-foreground italic ${!isExpanded && needsExpand ? 'line-clamp-4' : ''}`}>
+                      "{testimonial.text}"
+                    </p>
+                    {needsExpand && (
+                      <button
+                        onClick={() => toggleExpanded(index)}
+                        className="text-accent hover:text-accent/80 text-sm font-medium mt-2 flex items-center gap-1"
+                      >
+                        {isExpanded ? (
+                          <>Show Less <ChevronUp className="w-4 h-4" /></>
+                        ) : (
+                          <>Read More <ChevronDown className="w-4 h-4" /></>
+                        )}
+                      </button>
+                    )}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {testimonial.location}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         {/* See More Button */}
