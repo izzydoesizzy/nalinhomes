@@ -4,8 +4,8 @@ const metrics = [
   {
     icon: Home,
     value: "150+",
-    label: "Homes Sold",
-    description: "Successfully closed deals"
+    label: "Buyers Helped",
+    description: "Find their dream homes"
   },
   {
     icon: Users,
