@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Star } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 export const Hero = () => {
@@ -20,17 +20,17 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div className="text-center md:text-left">
-            <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 animate-fade-in leading-tight">
-              Thinking of Buying Your First Home in Toronto?
-            </h1>
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 animate-fade-in leading-relaxed">
-              Skip the stress, uncertainty, and overwhelm. Let me guide you through every step with clarity, confidence, and care.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in">
+      <div className="relative z-10 container mx-auto px-4 py-12">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
+            {/* Text Content */}
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4 animate-fade-in leading-tight">
+                Thinking of Buying Your First Home in Toronto?
+              </h1>
+              <p className="text-lg md:text-xl text-primary-foreground/90 mb-6 animate-fade-in">
+                Skip the stress, uncertainty, and overwhelm. Let me guide you through every step with clarity, confidence, and care.
+              </p>
               <Button
                 size="lg"
                 onClick={scrollToContact}
@@ -39,40 +39,48 @@ export const Hero = () => {
                 Book Your Discovery Call
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
-                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8 py-6"
-              >
-                Learn More About Me
-              </Button>
             </div>
-          </div>
 
-          {/* Video Section */}
-          <div className="relative group animate-fade-in">
-            <div className="aspect-video bg-gradient-to-br from-primary to-primary/80 rounded-xl overflow-hidden shadow-lg">
-              <div className="w-full h-full flex items-center justify-center">
-                <Button
-                  size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full w-20 h-20 p-0 group-hover:scale-110 transition-transform shadow-accent"
-                >
-                  <Play className="h-10 w-10 ml-1" fill="currentColor" />
-                </Button>
+            {/* Video Section */}
+            <div className="relative group animate-fade-in">
+              <div className="aspect-video bg-gradient-to-br from-primary to-primary/80 rounded-xl overflow-hidden shadow-lg">
+                <div className="w-full h-full flex items-center justify-center">
+                  <Button
+                    size="lg"
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full w-20 h-20 p-0 group-hover:scale-110 transition-transform shadow-accent"
+                  >
+                    <Play className="h-10 w-10 ml-1" fill="currentColor" />
+                  </Button>
+                </div>
               </div>
             </div>
-            <p className="text-center text-sm text-primary-foreground/70 mt-4">
-              Click to watch Nalin's introduction video
-            </p>
           </div>
-        </div>
-      </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-primary-foreground/50 rounded-full" />
+          {/* Metrics */}
+          <div className="grid grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">150+</div>
+              <div className="text-lg text-primary-foreground/90">Homes Purchased</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">60+</div>
+              <div className="text-lg text-primary-foreground/90">5-Star Reviews</div>
+            </div>
+          </div>
+
+          {/* Featured Testimonial */}
+          <div className="max-w-3xl mx-auto bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl p-8 animate-fade-in">
+            <div className="flex gap-1 mb-4 justify-center">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+              ))}
+            </div>
+            <p className="text-xl text-primary-foreground text-center italic mb-6">
+              "Nalin made our first home purchase incredibly smooth. He explained everything in detail and never made us feel rushed. We closed on our dream condo in just 6 weeks!"
+            </p>
+            <p className="font-semibold text-primary-foreground text-center">Sarah & Michael Chen</p>
+            <p className="text-primary-foreground/80 text-center">North York, Toronto</p>
+          </div>
         </div>
       </div>
     </section>
