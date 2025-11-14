@@ -60,7 +60,7 @@ export const Hero = () => {
           </div>
 
           {/* Authority Bar */}
-          <div className="bg-gradient-to-r from-primary via-primary/95 to-primary/90 rounded-xl p-6 mb-8 border border-primary/20">
+          <div className="rounded-xl p-6 mb-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {[
                 {
