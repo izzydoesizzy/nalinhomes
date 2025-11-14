@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Star } from "lucide-react";
+import { ArrowRight, Play, Star, Home, Target, Clock } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import videoThumbnail from "@/assets/video-thumbnail.png";
 export const Hero = () => {
@@ -59,8 +59,58 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Metrics */}
-          
+          {/* Authority Bar */}
+          <div className="bg-gradient-to-r from-primary via-primary/95 to-primary/90 rounded-xl p-6 mb-8 border border-primary/20">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+              {[
+                {
+                  icon: Home,
+                  value: "150+",
+                  label: "Homes Purchased",
+                  subtitle: "Trusted across Toronto",
+                },
+                {
+                  icon: Star,
+                  value: "60+",
+                  label: "5-Star Reviews",
+                  subtitle: "Real stories from real buyers",
+                },
+                {
+                  icon: Target,
+                  value: "80%",
+                  label: "First-Offer Success Rate",
+                  subtitle: "A strategy that wins in any market",
+                },
+                {
+                  icon: Clock,
+                  value: "2–3 Months",
+                  label: "Avg to Get the Keys",
+                  subtitle: "Focused, efficient, and stress-free",
+                },
+              ].map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div
+                    key={index}
+                    className="text-center group hover:scale-105 transition-transform duration-300"
+                  >
+                    <div className="flex flex-col items-center gap-2">
+                      <Icon className="w-8 h-8 text-accent mb-1 group-hover:text-accent/80 transition-colors" />
+                      <div className="text-2xl md:text-3xl font-bold text-primary-foreground">
+                        {stat.value}
+                      </div>
+                      <div className="text-sm md:text-base font-semibold text-primary-foreground/95">
+                        {stat.label}
+                      </div>
+                      <div className="text-xs md:text-sm text-primary-foreground/75">
+                        {stat.subtitle}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
 
           {/* Featured Testimonials */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
