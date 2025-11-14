@@ -42,8 +42,10 @@ export const ProcessPhilosophy = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-4">
+    <section className="py-20 bg-gradient-to-b from-secondary via-secondary/50 to-background relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(236,72,153,0.1),transparent_50%)]"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-16">
           {/* The Buying Process Timeline */}
           <div>
@@ -54,12 +56,13 @@ export const ProcessPhilosophy = () => {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {processSteps.map((step, index) => (
-                <div key={index} className="relative">
-                  <Card className="h-full hover:shadow-lg transition-shadow">
+                <div key={index} className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <Card className="h-full hover:shadow-xl transition-all duration-300 border-accent/20 hover:border-accent/40 relative z-10 bg-card/80 backdrop-blur-sm">
                     <CardContent className="p-6">
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0">
-                          <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent/30 to-primary/30 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                             <step.icon className="w-6 h-6 text-accent" />
                           </div>
                         </div>
@@ -79,12 +82,13 @@ export const ProcessPhilosophy = () => {
           </div>
 
           {/* Testimonial Quote */}
-          <div className="bg-accent/10 border-l-4 border-accent rounded-lg p-6 max-w-3xl mx-auto">
-            <Quote className="w-8 h-8 text-accent mb-4" />
-            <p className="text-lg text-foreground italic mb-3">
-              "Nalin made our first home purchase incredibly smooth. He explained everything in detail and never made us feel rushed."
+          <div className="relative overflow-hidden bg-gradient-to-br from-accent/20 via-primary/10 to-accent/20 border-l-4 border-accent rounded-lg p-8 max-w-3xl mx-auto shadow-lg">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl"></div>
+            <Quote className="w-10 h-10 text-accent mb-4 relative z-10" />
+            <p className="text-lg text-foreground italic mb-3 relative z-10">
+              "It really felt like his goal was to make sure we bought a home we loved and would be happy in, and he took the anxiety out of home buying."
             </p>
-            <p className="text-sm font-semibold text-muted-foreground">— Sarah & Michael Chen</p>
+            <p className="text-sm font-semibold text-muted-foreground relative z-10">— Krisha Malik, Toronto</p>
           </div>
         </div>
       </div>
