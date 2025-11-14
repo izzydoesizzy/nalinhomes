@@ -3,48 +3,36 @@ import { ArrowRight, Play, Star } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import videoThumbnail from "@/assets/video-thumbnail.png";
 import { useState, useEffect } from "react";
-
 export const Hero = () => {
-  const testimonials = [
-    {
-      quote: "After a handful of showings, he crafted a master offer which was accepted and closed all within 30 days.",
-      author: "Jermaine Bain",
-      location: "Toronto",
-    },
-    {
-      quote: "The whole process felt seamless, smart, and oddly stress-free.",
-      author: "Harry Gill",
-      location: "Toronto",
-    },
-    {
-      quote: "Nalin surpassed every single hope and expectation.",
-      author: "Chi Nguyen",
-      location: "Toronto",
-    },
-  ];
-
+  const testimonials = [{
+    quote: "After a handful of showings, he crafted a master offer which was accepted and closed all within 30 days.",
+    author: "Jermaine Bain",
+    location: "Toronto"
+  }, {
+    quote: "The whole process felt seamless, smart, and oddly stress-free.",
+    author: "Harry Gill",
+    location: "Toronto"
+  }, {
+    quote: "Nalin surpassed every single hope and expectation.",
+    author: "Chi Nguyen",
+    location: "Toronto"
+  }];
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+      setCurrentTestimonial(prev => (prev + 1) % testimonials.length);
     }, 5000);
     return () => clearInterval(interval);
   }, []);
-
   const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroBg}
-          alt="Toronto skyline"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroBg} alt="Toronto skyline" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-hero-start/95 via-hero-start/85 to-hero-end/75" />
       </div>
 
@@ -60,11 +48,7 @@ export const Hero = () => {
               <p className="text-lg md:text-xl text-primary-foreground/90 mb-6 animate-fade-in">
                 Skip the stress, uncertainty, and overwhelm. Let me guide you through every step with clarity, confidence, and care.
               </p>
-              <Button
-                size="lg"
-                onClick={scrollToContact}
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-accent transition-all hover:scale-105"
-              >
+              <Button size="lg" onClick={scrollToContact} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-accent transition-all hover:scale-105">
                 Book Your Discovery Call
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -73,16 +57,9 @@ export const Hero = () => {
             {/* Video Section */}
             <div className="relative group animate-fade-in">
               <div className="aspect-video rounded-xl overflow-hidden shadow-lg relative">
-                <img
-                  src={videoThumbnail}
-                  alt="Nalin Sharma introduction video"
-                  className="w-full h-full object-cover"
-                />
+                <img src={videoThumbnail} alt="Nalin Sharma introduction video" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <Button
-                    size="lg"
-                    className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full w-20 h-20 p-0 group-hover:scale-110 transition-transform shadow-accent"
-                  >
+                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full w-20 h-20 p-0 group-hover:scale-110 transition-transform shadow-accent">
                     <Play className="h-10 w-10 ml-1" fill="currentColor" />
                   </Button>
                 </div>
@@ -91,23 +68,12 @@ export const Hero = () => {
           </div>
 
           {/* Metrics */}
-          <div className="grid grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">150+</div>
-              <div className="text-lg text-primary-foreground/90">Homes Purchased</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-primary-foreground mb-2">60+</div>
-              <div className="text-lg text-primary-foreground/90">5-Star Reviews</div>
-            </div>
-          </div>
+          
 
           {/* Featured Testimonial */}
           <div className="max-w-3xl mx-auto bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl p-8 animate-fade-in">
             <div className="flex gap-1 mb-4 justify-center">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-              ))}
+              {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
             </div>
             <p className="text-xl text-primary-foreground text-center italic mb-6 transition-all duration-500">
               "{testimonials[currentTestimonial].quote}"
@@ -121,6 +87,5 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
