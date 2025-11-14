@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Star } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import videoThumbnail from "@/assets/video-thumbnail.png";
 
 export const Hero = () => {
   const scrollToContact = () => {
@@ -43,8 +44,13 @@ export const Hero = () => {
 
             {/* Video Section */}
             <div className="relative group animate-fade-in">
-              <div className="aspect-video bg-gradient-to-br from-primary to-primary/80 rounded-xl overflow-hidden shadow-lg">
-                <div className="w-full h-full flex items-center justify-center">
+              <div className="aspect-video rounded-xl overflow-hidden shadow-lg relative">
+                <img
+                  src={videoThumbnail}
+                  alt="Nalin Sharma introduction video"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
                   <Button
                     size="lg"
                     className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full w-20 h-20 p-0 group-hover:scale-110 transition-transform shadow-accent"

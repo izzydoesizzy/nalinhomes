@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
+import royalLePageLogo from "@/assets/royal-lepage-logo.svg";
 
 export const Footer = () => {
   return (
@@ -78,6 +79,13 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 pt-8 text-center text-primary-foreground/70 text-sm">
+          <div className="flex justify-center mb-6">
+            <img
+              src={royalLePageLogo}
+              alt="Royal LePage"
+              className="h-16 brightness-0 invert opacity-80"
+            />
+          </div>
           <p>© {new Date().getFullYear()} Nalin Sharma Real Estate. All rights reserved.</p>
           <p className="mt-2">Licensed Real Estate Broker in Ontario</p>
         </div>
