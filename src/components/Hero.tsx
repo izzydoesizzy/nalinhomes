@@ -2,7 +2,24 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Star, Home, Target, Clock } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import videoThumbnail from "@/assets/video-thumbnail.png";
+import { useState, useEffect } from "react";
+
 export const Hero = () => {
+  const [currentAvatar, setCurrentAvatar] = useState(0);
+  
+  const avatars = [
+    "First-time home-buyers in Toronto",
+    "Young families growing in the GTA"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentAvatar((prev) => (prev + 1) % avatars.length);
+    }, 3000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   const testimonials = [{
     quote: "After a handful of showings, he crafted a master offer which was accepted and closed all within 30 days.",
     author: "Jermaine Bain",
@@ -31,6 +48,17 @@ export const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-12 pb-4">
         <div className="max-w-6xl mx-auto">
+          {/* Rotating Avatar Callout */}
+          <div className="flex justify-center mb-6">
+            <div className="inline-block">
+              <div className="px-6 py-2 bg-white/10 border border-white/20 rounded-full backdrop-blur-sm">
+                <p className="text-sm font-medium text-white animate-fade-in" key={currentAvatar}>
+                  {avatars[currentAvatar]}
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
             {/* Text Content */}
             <div className="text-center md:text-left">

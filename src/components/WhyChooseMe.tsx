@@ -1,15 +1,7 @@
-import { useState, useEffect } from "react";
 import { Shield, Clock, TrendingUp, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const WhyChooseMe = () => {
-  const [currentAvatar, setCurrentAvatar] = useState(0);
-  
-  const avatars = [
-    "First-time home-buyers in Toronto",
-    "Young families growing in the GTA"
-  ];
-
   const clientBenefits = [
     {
       icon: Shield,
@@ -33,31 +25,12 @@ export const WhyChooseMe = () => {
     },
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentAvatar((prev) => (prev + 1) % avatars.length);
-    }, 3000);
-    
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(71,85,105,0.4),transparent_60%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(30,41,59,0.5),transparent_60%)]"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto space-y-16">
-          {/* Rotating Avatar Callout */}
-          <div className="flex justify-center">
-            <div className="inline-block">
-              <div className="px-6 py-2 bg-slate-700/50 border border-slate-600 rounded-full backdrop-blur-sm">
-                <p className="text-sm font-medium text-slate-200 animate-fade-in" key={currentAvatar}>
-                  {avatars[currentAvatar]}
-                </p>
-              </div>
-            </div>
-          </div>
-
           {/* Why Clients Choose Me */}
           <div>
             <h3 className="text-3xl font-bold text-white mb-4 text-center">Why Clients Choose Me</h3>
@@ -68,10 +41,10 @@ export const WhyChooseMe = () => {
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {clientBenefits.map((benefit, index) => {
                 const colors = [
-                  { gradient: 'from-slate-600 to-slate-700', icon: 'text-slate-400' },
-                  { gradient: 'from-slate-700 to-slate-800', icon: 'text-slate-400' },
-                  { gradient: 'from-gray-600 to-gray-700', icon: 'text-gray-400' },
-                  { gradient: 'from-gray-700 to-gray-800', icon: 'text-gray-400' },
+                  { gradient: 'from-emerald-500 to-teal-600', icon: 'text-emerald-400' },
+                  { gradient: 'from-blue-500 to-cyan-600', icon: 'text-blue-400' },
+                  { gradient: 'from-violet-500 to-purple-600', icon: 'text-violet-400' },
+                  { gradient: 'from-amber-500 to-orange-600', icon: 'text-amber-400' },
                 ];
                 const color = colors[index % colors.length];
                 

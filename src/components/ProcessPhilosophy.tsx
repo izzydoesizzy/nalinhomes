@@ -57,12 +57,12 @@ export const ProcessPhilosophy = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {processSteps.map((step, index) => {
                 const colors = [
-                  { gradient: 'from-blue-600 to-blue-700', icon: 'text-blue-600' },
-                  { gradient: 'from-slate-600 to-slate-700', icon: 'text-slate-600' },
-                  { gradient: 'from-teal-600 to-teal-700', icon: 'text-teal-600' },
-                  { gradient: 'from-indigo-600 to-indigo-700', icon: 'text-indigo-600' },
-                  { gradient: 'from-cyan-600 to-cyan-700', icon: 'text-cyan-600' },
-                  { gradient: 'from-blue-700 to-blue-800', icon: 'text-blue-700' },
+                  { gradient: 'from-blue-500 to-cyan-500', icon: 'text-blue-500' },
+                  { gradient: 'from-emerald-500 to-teal-500', icon: 'text-emerald-500' },
+                  { gradient: 'from-violet-500 to-purple-500', icon: 'text-violet-500' },
+                  { gradient: 'from-amber-500 to-orange-500', icon: 'text-amber-500' },
+                  { gradient: 'from-rose-500 to-pink-500', icon: 'text-rose-500' },
+                  { gradient: 'from-indigo-500 to-blue-500', icon: 'text-indigo-500' },
                 ];
                 const color = colors[index % colors.length];
                 
