@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Star } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import videoThumbnail from "@/assets/video-thumbnail.png";
-import { useState, useEffect } from "react";
 
 export const Hero = () => {
   const testimonials = [
@@ -22,15 +21,6 @@ export const Hero = () => {
       location: "Toronto",
     },
   ];
-
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
@@ -102,22 +92,29 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Featured Testimonial */}
-          <div className="max-w-3xl mx-auto bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl p-8 animate-fade-in">
-            <div className="flex gap-1 mb-4 justify-center">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-              ))}
-            </div>
-            <p className="text-xl text-primary-foreground text-center italic mb-6 transition-all duration-500">
-              "{testimonials[currentTestimonial].quote}"
-            </p>
-            <p className="font-semibold text-primary-foreground text-center">
-              {testimonials[currentTestimonial].author}
-            </p>
-            <p className="text-primary-foreground/80 text-center">
-              {testimonials[currentTestimonial].location}
-            </p>
+          {/* Featured Testimonials */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={index}
+                className="bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-xl p-6"
+              >
+                <div className="flex gap-1 mb-4 justify-center">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                  ))}
+                </div>
+                <p className="text-base text-primary-foreground text-center italic mb-4">
+                  "{testimonial.quote}"
+                </p>
+                <p className="font-semibold text-primary-foreground text-center text-sm">
+                  {testimonial.author}
+                </p>
+                <p className="text-primary-foreground/80 text-center text-sm">
+                  {testimonial.location}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
