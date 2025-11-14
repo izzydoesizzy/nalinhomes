@@ -2,8 +2,36 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Star } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import videoThumbnail from "@/assets/video-thumbnail.png";
+import { useState, useEffect } from "react";
 
 export const Hero = () => {
+  const testimonials = [
+    {
+      quote: "After a handful of showings, he crafted a master offer which was accepted and closed all within 30 days.",
+      author: "Jermaine Bain",
+      location: "Toronto",
+    },
+    {
+      quote: "The whole process felt seamless, smart, and oddly stress-free.",
+      author: "Harry Gill",
+      location: "Toronto",
+    },
+    {
+      quote: "Nalin surpassed every single hope and expectation.",
+      author: "Chi Nguyen",
+      location: "Toronto",
+    },
+  ];
+
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -81,11 +109,15 @@ export const Hero = () => {
                 <Star key={i} className="w-5 h-5 fill-accent text-accent" />
               ))}
             </div>
-            <p className="text-xl text-primary-foreground text-center italic mb-6">
-              "Nalin made our first home purchase incredibly smooth. He explained everything in detail and never made us feel rushed. We closed on our dream condo in just 6 weeks!"
+            <p className="text-xl text-primary-foreground text-center italic mb-6 transition-all duration-500">
+              "{testimonials[currentTestimonial].quote}"
             </p>
-            <p className="font-semibold text-primary-foreground text-center">Sarah & Michael Chen</p>
-            <p className="text-primary-foreground/80 text-center">North York, Toronto</p>
+            <p className="font-semibold text-primary-foreground text-center">
+              {testimonials[currentTestimonial].author}
+            </p>
+            <p className="text-primary-foreground/80 text-center">
+              {testimonials[currentTestimonial].location}
+            </p>
           </div>
         </div>
       </div>
