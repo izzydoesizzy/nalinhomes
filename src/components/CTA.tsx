@@ -3,7 +3,7 @@ import { Calendar, Mail, Phone } from "lucide-react";
 
 export const CTA = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-primary to-primary/90 relative overflow-hidden">
+    <section id="contact" className="py-32 bg-gradient-to-br from-primary to-primary/90 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

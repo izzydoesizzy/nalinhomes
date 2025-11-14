@@ -3,7 +3,7 @@ import royalLePageLogo from "@/assets/royal-lepage-logo.svg";
 
 export const Footer = () => {
   return (
-    <footer className="bg-primary text-primary-foreground py-12">
+    <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}

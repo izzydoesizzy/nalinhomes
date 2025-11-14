@@ -46,7 +46,7 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-12 pb-4">
+      <div className="relative z-10 container mx-auto px-4 pt-12 pb-16">
         <div className="max-w-6xl mx-auto">
           {/* Rotating Avatar Callout */}
           <div className="flex justify-center mb-6">
