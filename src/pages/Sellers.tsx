@@ -3,6 +3,7 @@ import { SellerHero } from "@/components/seller/SellerHero";
 import { AboutNalin } from "@/components/seller/AboutNalin";
 import { SellerTestimonials } from "@/components/seller/SellerTestimonials";
 import { MarketingStrategy } from "@/components/seller/MarketingStrategy";
+import { MarketingExamples } from "@/components/seller/MarketingExamples";
 import { SellerTeam } from "@/components/seller/SellerTeam";
 import { CaseStudies } from "@/components/seller/CaseStudies";
 import { SellerFAQ } from "@/components/seller/SellerFAQ";
@@ -17,6 +18,7 @@ const Sellers = () => {
       <AboutNalin />
       <SellerTestimonials />
       <MarketingStrategy />
+      <MarketingExamples />
       <SellerTeam />
       <CaseStudies />
       <SellerFAQ />
