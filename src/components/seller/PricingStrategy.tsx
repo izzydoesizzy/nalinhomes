@@ -6,25 +6,25 @@ export const PricingStrategy = () => {
       icon: TrendingUp,
       title: "Data-Driven Analysis",
       description:
-        "Comprehensive market research analyzing recent comparable sales, current listings, and market trends to determine optimal positioning",
+        "Market research analyzing comparable sales, current listings, and trends for optimal positioning",
     },
     {
       icon: Target,
       title: "Strategic Positioning",
       description:
-        "Setting the right price to attract multiple qualified buyers and create competitive bidding situations that drive prices above asking",
+        "Setting right price to attract qualified buyers and create competitive bidding driving above asking",
     },
     {
       icon: Users,
       title: "Buyer Psychology",
       description:
-        "Understanding what motivates buyers in your market segment and pricing to maximize interest while maintaining premium perception",
+        "Understanding buyer motivation in your segment, pricing to maximize interest while maintaining premium perception",
     },
     {
       icon: Award,
       title: "Proven Results",
       description:
-        "Track record of 115% average sale price demonstrates the effectiveness of this strategic approach to pricing",
+        "Track record of 115% average sale price demonstrates effectiveness of strategic pricing approach",
     },
   ];
 

@@ -9,8 +9,8 @@ export const TeamCredentials = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Experience You Can Trust
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proven track record of delivering exceptional results with expert negotiation and strategic marketing
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Expert negotiation and strategic marketing delivering exceptional results
             </p>
           </div>
 
@@ -28,11 +28,11 @@ export const TeamCredentials = () => {
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <div className="bg-primary/20 rounded-full w-2 h-2 mt-2"></div>
-                  <p className="text-foreground"><strong>Nalin Sharma:</strong> Lead agent with 98 successful transactions. 92% of business from referrals and repeat clients. Master Certified Negotiation Expert with Diamond status achievement (Top 3% of Royal LePage agents).</p>
+                  <p className="text-foreground"><strong>Nalin Sharma:</strong> Lead agent, 98 transactions, 92% referrals. Master Negotiation Expert, Diamond status Top 3%.</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="bg-primary/20 rounded-full w-2 h-2 mt-2"></div>
-                  <p className="text-foreground"><strong>Jermaine Bain:</strong> Trusted colleague providing exceptional support and market expertise</p>
+                  <p className="text-foreground"><strong>Jermaine Bain:</strong> Diamond status partner. Trusted colleague with deep market knowledge and exceptional client support.</p>
                 </div>
               </div>
             </div>

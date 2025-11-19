@@ -65,15 +65,15 @@ export const AboutNalin = () => {
               </div>
 
               <p className="text-lg text-foreground leading-relaxed font-medium">
-                In 2019, I sold 63 Constance Avenue for <span className="text-amber-600 font-bold">$2.3M</span>—<span className="text-amber-600 font-bold">$1 million over the asking price</span> of $1.298M with <span className="text-accent font-bold">41 competing offers</span>. That's not luck. That's strategic pricing, Harvard-trained negotiation, and a proven marketing system that creates bidding wars.
+                In 2019, I sold 63 Constance Avenue for <span className="text-amber-600 font-bold">$2.3M</span>—<span className="text-amber-600 font-bold">$1M over asking</span> with <span className="text-accent font-bold">41 offers</span>. Not luck. Strategic pricing and Harvard-trained negotiation.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                For over a decade, I've been transforming Toronto homeowners' biggest assets into record-breaking sales. My approach combines data-driven pricing strategies, expert negotiation techniques from the Harvard Negotiation Program, and comprehensive marketing that attracts serious buyers.
+                My proven system creates bidding wars that maximize your sale price.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                With 92 of my last 98 clients referring me to friends and family, my track record speaks for itself. I don't just list homes—I create competitive bidding wars that maximize your sale price.
+                With 98 successful transactions, 92% from referrals—people who got results and told friends.
               </p>
 
               {/* Key Achievements as Badges */}

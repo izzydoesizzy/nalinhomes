@@ -1,4 +1,4 @@
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Instagram, Globe } from "lucide-react";
 
 export const ProfessionalTeam = () => {
@@ -6,8 +6,9 @@ export const ProfessionalTeam = () => {
     {
       name: "Lianne Gesior",
       role: "Professional Photographer",
-      description: "The best photographer I've seen in 10+ years. Lianne captures your home in its best light with stunning professional photography and drone footage.",
+      description: "Best photographer in 10+ years. Stunning photography and drone footage capturing homes in perfect light.",
       initials: "LG",
+      image: "https://api.dicebear.com/7.x/initials/svg?seed=LG",
       links: [
         { type: "instagram", url: "https://www.instagram.com/liannemariephoto_home/", label: "Instagram" }
       ],
@@ -16,8 +17,9 @@ export const ProfessionalTeam = () => {
       name: "Marie Whitaker",
       role: "Professional Stager",
       company: "Simply Abode",
-      description: "Expert staging that transforms properties and maximizes appeal to buyers. Marie's design expertise ensures your home presents flawlessly.",
+      description: "Expert staging transforming properties and maximizing buyer appeal. Design expertise ensuring flawless presentation for every home.",
       initials: "MW",
+      image: "https://api.dicebear.com/7.x/initials/svg?seed=MW",
       links: [
         { type: "website", url: "https://www.simplyabode.ca", label: "Website" },
         { type: "instagram", url: "https://www.instagram.com/simply.abode/", label: "Instagram" }
@@ -26,8 +28,9 @@ export const ProfessionalTeam = () => {
     {
       name: "Shelby Fenster",
       role: "Real Estate Lawyer",
-      description: "The most responsive and detail-oriented lawyer I've ever worked with. Shelby ensures smooth, stress-free closings every time.",
+      description: "Most responsive and detail-oriented lawyer. Ensures smooth, stress-free closings every single time with exceptional service.",
       initials: "SF",
+      image: "https://api.dicebear.com/7.x/initials/svg?seed=SF",
       links: [
         { type: "website", url: "https://www.fensterlaw.ca/", label: "Website" }
       ],
@@ -36,8 +39,9 @@ export const ProfessionalTeam = () => {
       name: "Lisa Simkins",
       role: "Home Inspector",
       company: "Superior Home Inspectors",
-      description: "Thorough pre-listing inspections that identify any issues before they become problems, giving buyers confidence in your property.",
+      description: "Thorough pre-listing inspections identifying issues before they become problems. Gives buyers confidence in your property's condition.",
       initials: "LS",
+      image: "https://api.dicebear.com/7.x/initials/svg?seed=LS",
       links: [
         { type: "website", url: "https://superiorhomeinspectors.ca/", label: "Website" }
       ],
@@ -64,8 +68,9 @@ export const ProfessionalTeam = () => {
                 className="bg-card rounded-lg p-8 border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg"
               >
                 <div className="flex items-start gap-6">
-                  <Avatar className="w-16 h-16 flex-shrink-0">
-                    <AvatarFallback className="bg-primary/10 text-primary text-xl font-semibold">
+                  <Avatar className="w-24 h-24 flex-shrink-0 transition-transform hover:scale-105">
+                    <AvatarImage src={member.image} alt={member.name} />
+                    <AvatarFallback className="bg-primary/10 text-primary text-2xl font-semibold">
                       {member.initials}
                     </AvatarFallback>
                   </Avatar>
@@ -81,17 +86,17 @@ export const ProfessionalTeam = () => {
                         {member.company}
                       </div>
                     )}
-                    <p className="text-muted-foreground text-sm mb-4">
+                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                       {member.description}
                     </p>
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 mt-auto">
                       {member.links.map((link, linkIndex) => (
                         <a
                           key={linkIndex}
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 text-sm text-accent hover:text-accent/80 transition-colors"
+                          className="flex items-center gap-1.5 text-sm font-medium text-accent hover:text-accent/80 transition-colors"
                         >
                           {link.type === "instagram" ? (
                             <Instagram className="w-4 h-4" />
