@@ -25,10 +25,10 @@ export const SellerCTA = () => {
   };
 
   const benefits = [
-    "Custom pricing strategy to maximize your sale price",
-    "Competitive market analysis showing recent comparable sales",
-    "Marketing plan that creates bidding wars",
-    "Free consultation ($500 value) with zero obligation",
+    "Custom pricing strategy maximizing your sale price",
+    "Market analysis showing recent comparable sales",
+    "Marketing plan creating bidding wars",
+    "Free consultation worth $500 with zero obligation",
   ];
 
   return (
@@ -54,7 +54,7 @@ export const SellerCTA = () => {
                 Get Your Free $1M+ Home Value Report
               </h2>
               <p className="text-lg text-slate-200 mb-2">
-                See what your home could sell for with my proven strategy
+                See your home's value with my proven strategy
               </p>
               <p className="text-base text-slate-300 mb-8">
                 No obligation, no pressure—just real data and expert analysis.

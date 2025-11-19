@@ -17,8 +17,8 @@ const caseStudies: CaseStudy[] = [
     listed: "$1,450,000",
     sold: "$1,700,000",
     offers: 28,
-    challenge: "Managing agent expectations and encouraging them to tell their clients to offer on a property with over 135+ showings. Buyers can get discouraged when a property is highly active.",
-    solution: "This architect-designed home received tons of interest. I had to give buyer agents hope that their client could bring the winning offer. We managed cleaning, 3D Matterport Tour, drone photography, and professional photography. The client staged the home themselves.",
+    challenge: "135+ showings risked buyer fatigue. Agents needed confidence their offer could win.",
+    solution: "Gave every agent hope with transparent communication. Managed 3D tour, drone, pro photos. Client self-staged beautifully.",
     highlight: "Far exceeded price expectations with 28 offers",
     image: "barondale"
   },
@@ -27,8 +27,8 @@ const caseStudies: CaseStudy[] = [
     listed: "$1,298,000",
     sold: "$2,300,000",
     offers: 41,
-    challenge: "Preparing a home that's been in the family for over 4 decades. This was an estate sale and we had to arrange for 3 trucks to remove all of the family's belongings.",
-    solution: "We managed professional photography and a floorplan. At the open houses we had approximately 100 people come through each day!",
+    challenge: "4-decade family estate. Required clearing entire home before marketing could begin.",
+    solution: "Arranged 3 trucks for removal. Pro photos and floorplan. Generated 100 people per open house creating massive competition.",
     highlight: "$1 million over asking with 41 offers",
     image: "constance"
   },
@@ -37,8 +37,8 @@ const caseStudies: CaseStudy[] = [
     listed: "$570,000",
     sold: "$617,000",
     offers: 7,
-    challenge: "Timing. The client wanted to list in March 2020, but COVID derailed that plan. The small size and tenant working from home meant it would not present well.",
-    solution: "We waited until COVID subsided and the tenant vacated. I managed minor renovations, cleaning, and professional photography. We had 37 showings and generated 7 offers.",
+    challenge: "COVID timing, small size, occupied tenant working from home. Property couldn't show well.",
+    solution: "Waited for tenant exit. Managed renovations, cleaning, pro photos. Strategic timing generated 37 showings and 7 competitive offers.",
     highlight: "Set a new record for 1-bedroom units in the building",
     image: "roehampton"
   },
@@ -47,8 +47,8 @@ const caseStudies: CaseStudy[] = [
     listed: "$700,000",
     sold: "$760,000",
     offers: 2,
-    challenge: "Selling a unit on a low floor, with no parking, and a bad view. It was an oversized one bedroom which appeals to a smaller demographic.",
-    solution: "We managed complete staging, floorplan and professional photography. The unit presented very well which generated two offers with no offer date, putting us in a solid negotiating position.",
+    challenge: "Low floor, no parking, bad view. Oversized 1-bed appeals to smaller buyer pool.",
+    solution: "Complete staging, floorplan, pro photos. Premium presentation generated 2 offers without offer date. Strong negotiating position achieved best price.",
     highlight: "Highest sale price for a 1-bedroom in that building at the time",
     image: "yonge"
   },
@@ -57,8 +57,8 @@ const caseStudies: CaseStudy[] = [
     listed: "$2,699,000",
     sold: "$2,600,000",
     offers: 1,
-    challenge: "Selling a luxury property during winter, which eventually turned into the COVID-19 pandemic. Listed for 7 months with multiple price adjustments needed.",
-    solution: "The home had to be presented at the highest level. We managed minor renovations, electrical work, window cleaning, staging, 3D Matterport Tour, professional photography, and floorplans.",
+    challenge: "Luxury property in winter turning into COVID. 7-month listing requiring multiple price adjustments.",
+    solution: "Highest-level presentation. Managed renovations, electrical, window cleaning, staging, 3D tour, photos, floorplans. Patience and premium approach secured sale.",
     highlight: "Patience and premium presentation in non-luxury neighborhood",
     image: "northcote"
   },
@@ -67,8 +67,8 @@ const caseStudies: CaseStudy[] = [
     listed: "$650,000",
     sold: "$650,000",
     offers: 2,
-    challenge: "Selling a condo during a pandemic with multiple competing units in the building. Within 1 week of listing, several other units were also listed, creating immediate competition.",
-    solution: "Complete staging, photography and 3D Matterport tour. After a strategic price adjustment due to additional competition, it immediately generated 2 offers.",
+    challenge: "Pandemic timing. Multiple competing units listed same week created immediate local competition.",
+    solution: "Full staging, photography, 3D tour. Strategic price adjustment post-competition immediately generated 2 offers securing quick sale despite challenges.",
     highlight: "Quick sale despite intense local competition",
     image: "lakeshore"
   },
@@ -87,7 +87,7 @@ export const CaseStudies = () => {
               How I Get Top Dollar: 6 Recent Sales
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Real properties, real strategies, real results. See exactly how strategic pricing and expert negotiation delivered record-breaking outcomes.
+              Strategic pricing and marketing creating exceptional outcomes
             </p>
           </div>
 

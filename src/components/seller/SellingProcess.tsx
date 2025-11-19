@@ -7,42 +7,42 @@ export const SellingProcess = () => {
       number: "01",
       title: "Initial Consultation",
       description:
-        "We'll discuss your goals, timeline, and what you want to achieve from your sale",
+        "Discuss your goals, timeline, and what you want from sale",
     },
     {
       icon: Home,
       number: "02",
       title: "Property Assessment",
       description:
-        "Comprehensive market analysis and property evaluation to determine optimal pricing",
+        "Market analysis and property evaluation to determine optimal pricing strategy",
     },
     {
       icon: Camera,
       number: "03",
       title: "Preparation & Marketing",
       description:
-        "Professional photography, staging consultation, and launch of multi-channel marketing campaign",
+        "Professional photography, staging consultation, and multi-channel marketing campaign launch",
     },
     {
       icon: TrendingUp,
       number: "04",
       title: "Strategic Pricing",
       description:
-        "Data-driven pricing strategy designed to generate competitive offers and bidding wars",
+        "Data-driven pricing strategy designed to generate competitive offers and wars",
     },
     {
       icon: Users,
       number: "05",
       title: "Showings & Offers",
       description:
-        "Professional showings and expert negotiation to secure the best possible terms",
+        "Professional showings and expert negotiation to secure best possible terms",
     },
     {
       icon: CheckCircle,
       number: "06",
       title: "Closing & Beyond",
       description:
-        "Seamless coordination through closing and continued support after the sale",
+        "Seamless coordination through closing and continued support after your sale",
     },
   ];
 

@@ -32,7 +32,7 @@ export const SellerHero = () => {
               <span className="block text-amber-400 mt-2">$1 Million Over Asking</span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto mb-8">
-              Strategic pricing and Harvard-trained negotiation that turns your home into a competitive bidding war
+              Harvard-trained negotiation that turns homes into bidding wars
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
