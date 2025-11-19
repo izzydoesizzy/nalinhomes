@@ -8,7 +8,7 @@ export const AboutNalin = () => {
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-[80%] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Left Column - Photo and Credentials */}
             <div className="space-y-6">
@@ -58,41 +58,45 @@ export const AboutNalin = () => {
             {/* Right Column - About Text */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-4xl font-bold text-foreground mb-4">
-                  Meet Your Selling Strategist
+                <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
+                  The Agent Who Gets Sellers $1M+ Over Asking
                 </h2>
                 <div className="h-1 w-24 bg-accent rounded-full mb-6"></div>
               </div>
 
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                For over a decade, I've been helping Toronto homeowners achieve exceptional results when selling their properties. I understand that selling your home is one of the biggest financial decisions you'll make—and you deserve an agent who treats it that way.
+              <p className="text-lg text-foreground leading-relaxed font-medium">
+                In 2019, I sold 63 Constance Avenue for <span className="text-amber-600 font-bold">$2.3M</span>—<span className="text-amber-600 font-bold">$1 million over the asking price</span> of $1.298M with <span className="text-accent font-bold">41 competing offers</span>. That's not luck. That's strategic pricing, Harvard-trained negotiation, and a proven marketing system that creates bidding wars.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                My approach is built on strategic pricing, expert negotiation, and transparent communication. I don't just list homes—I create comprehensive marketing strategies that generate multiple offers and drive prices up.
+                For over a decade, I've been transforming Toronto homeowners' biggest assets into record-breaking sales. My approach combines data-driven pricing strategies, expert negotiation techniques from the Harvard Negotiation Program, and comprehensive marketing that attracts serious buyers.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                With 92% of my business coming from referrals, my clients' success speaks for itself.
+                With 92 of my last 98 clients referring me to friends and family, my track record speaks for itself. I don't just list homes—I create competitive bidding wars that maximize your sale price.
               </p>
 
-              {/* Key Stats */}
+              {/* Key Achievements as Badges */}
               <div className="grid grid-cols-2 gap-4 pt-6">
-                <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
-                  <div className="text-3xl font-bold text-accent mb-1">98</div>
-                  <div className="text-sm text-muted-foreground">Successful Transactions</div>
+                <div className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 rounded-xl p-6 border-2 border-amber-200 dark:border-amber-700">
+                  <div className="text-3xl font-black text-amber-600 mb-2">177%</div>
+                  <div className="text-sm font-semibold text-amber-900 dark:text-amber-100">Highest Sale Price</div>
+                  <div className="text-xs text-amber-700 dark:text-amber-300 mt-1">63 Constance Ave</div>
                 </div>
-                <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
-                  <div className="text-3xl font-bold text-accent mb-1">92%</div>
-                  <div className="text-sm text-muted-foreground">From Referrals</div>
+                <div className="bg-gradient-to-br from-accent/10 to-accent/20 rounded-xl p-6 border-2 border-accent/30">
+                  <div className="text-3xl font-black text-accent mb-2">41</div>
+                  <div className="text-sm font-semibold text-foreground">Offers Generated</div>
+                  <div className="text-xs text-muted-foreground mt-1">Record property sale</div>
                 </div>
-                <div className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 rounded-xl p-6 border border-amber-200 dark:border-amber-700">
-                  <div className="text-3xl font-bold text-amber-600 mb-1">Top 3%</div>
-                  <div className="text-sm text-amber-800 dark:text-amber-300">Diamond Status Agent</div>
+                <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 rounded-xl p-6 border-2 border-emerald-200 dark:border-emerald-700">
+                  <div className="text-3xl font-black text-emerald-600 mb-2">92%</div>
+                  <div className="text-sm font-semibold text-emerald-900 dark:text-emerald-100">Referral Rate</div>
+                  <div className="text-xs text-emerald-700 dark:text-emerald-300 mt-1">From 98 transactions</div>
                 </div>
-                <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
-                  <div className="text-3xl font-bold text-accent mb-1">10+</div>
-                  <div className="text-sm text-muted-foreground">Years of Excellence</div>
+                <div className="bg-gradient-to-br from-primary/10 to-primary/20 rounded-xl p-6 border-2 border-primary/30">
+                  <div className="text-3xl font-black text-primary mb-2">Top 3%</div>
+                  <div className="text-sm font-semibold text-foreground">Diamond Status</div>
+                  <div className="text-xs text-muted-foreground mt-1">Of 18,000 agents</div>
                 </div>
               </div>
             </div>
