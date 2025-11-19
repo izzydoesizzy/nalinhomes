@@ -28,11 +28,13 @@ export const SellerHero = () => {
           {/* Main Heading */}
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
-              I Sold 63 Constance Avenue for
-              <span className="block text-amber-400 mt-2">$1 Million Over Asking</span>
+              Selling With Confidence
             </h1>
-            <p className="text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto mb-8">
-              Harvard-trained negotiation that turns homes into bidding wars
+            <p className="text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto mb-4">
+              Understanding your needs first, then delivering exceptional results
+            </p>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
+              Why are you selling? Where are you living next? Let's start with what matters to you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button

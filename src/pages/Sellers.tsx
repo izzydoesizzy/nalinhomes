@@ -1,11 +1,8 @@
 import { Navigation } from "@/components/Navigation";
 import { SellerHero } from "@/components/seller/SellerHero";
 import { AboutNalin } from "@/components/seller/AboutNalin";
-import { ResultsDashboard } from "@/components/seller/ResultsDashboard";
-import { TeamCredentials } from "@/components/seller/TeamCredentials";
-import { CaseStudies } from "@/components/seller/CaseStudies";
-import { ProfessionalTeam } from "@/components/seller/ProfessionalTeam";
 import { MarketingStrategy } from "@/components/seller/MarketingStrategy";
+import { CaseStudies } from "@/components/seller/CaseStudies";
 import { SellerCTA } from "@/components/seller/SellerCTA";
 import { Footer } from "@/components/Footer";
 
@@ -15,11 +12,8 @@ const Sellers = () => {
       <Navigation />
       <SellerHero />
       <AboutNalin />
-      <ResultsDashboard />
-      <TeamCredentials />
-      <CaseStudies />
-      <ProfessionalTeam />
       <MarketingStrategy />
+      <CaseStudies />
       <SellerCTA />
       <Footer />
     </div>
