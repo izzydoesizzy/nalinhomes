@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/royal-lepage-logo.svg";
-import logoWhite from "@/assets/royal-lepage-logo-white.png";
+import logoWhite from "@/assets/royal-lepage-logo-white.svg";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
