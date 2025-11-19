@@ -46,7 +46,7 @@ export const Navigation = () => {
             <img 
               src={isScrolled ? logo : logoWhite} 
               alt="Royal LePage" 
-              className="h-12 w-auto transition-opacity duration-300" 
+              className="h-10 w-auto transition-opacity duration-300" 
             />
             <div className="hidden md:block">
               <div className={`font-bold text-lg transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}>Nalin Sharma</div>

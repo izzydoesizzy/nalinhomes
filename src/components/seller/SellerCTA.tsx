@@ -13,7 +13,6 @@ export const SellerCTA = () => {
     email: "",
     phone: "",
     address: "",
-    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -22,7 +21,7 @@ export const SellerCTA = () => {
       title: "Request Received!",
       description: "I'll contact you within 24 hours with your free home valuation.",
     });
-    setFormData({ name: "", email: "", phone: "", address: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", address: "" });
   };
 
   const benefits = [
@@ -88,9 +87,16 @@ export const SellerCTA = () => {
 
             {/* Right Column - Form */}
             <div className="bg-white rounded-2xl p-8 shadow-2xl">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Full Name *</Label>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                Request Your Free Valuation
+              </h3>
+              <p className="text-slate-600 mb-6">
+                Fill out the quick form below and I'll get back to you within 24 hours.
+              </p>
+              
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <Label htmlFor="name">Full Name</Label>
                   <Input
                     id="name"
                     required
@@ -98,74 +104,60 @@ export const SellerCTA = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    placeholder="John Smith"
+                    className="mt-1"
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email Address *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) =>
-                      setFormData({ ...formData, email: e.target.value })
-                    }
-                    placeholder="john@example.com"
-                  />
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
+                      className="mt-1"
+                    />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="phone">Phone</Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={(e) =>
+                        setFormData({ ...formData, phone: e.target.value })
+                      }
+                      className="mt-1"
+                    />
+                  </div>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number *</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    required
-                    value={formData.phone}
-                    onChange={(e) =>
-                      setFormData({ ...formData, phone: e.target.value })
-                    }
-                    placeholder="(416) 555-0123"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="address">Property Address *</Label>
+                <div>
+                  <Label htmlFor="address">Property Address</Label>
                   <Input
                     id="address"
                     required
+                    placeholder="123 Main St, Toronto, ON"
                     value={formData.address}
                     onChange={(e) =>
                       setFormData({ ...formData, address: e.target.value })
                     }
-                    placeholder="123 Main Street, Toronto, ON"
+                    className="mt-1"
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Additional Details (Optional)</Label>
-                  <Textarea
-                    id="message"
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    placeholder="Tell me about your timeline, property features, or any questions you have..."
-                    rows={4}
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full bg-accent hover:bg-accent/90 text-white"
-                >
+                <Button type="submit" className="w-full bg-primary hover:bg-primary/90" size="lg">
                   Get My Free Valuation
                 </Button>
-
-                <p className="text-xs text-center text-muted-foreground">
-                  Your information is secure and will never be shared. I'll respond within 24 hours.
+                
+                <p className="text-xs text-slate-500 text-center mt-3">
+                  No obligations. Your information is kept confidential.
                 </p>
               </form>
             </div>
