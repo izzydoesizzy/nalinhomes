@@ -35,7 +35,7 @@ export const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+          : "bg-slate-900/80 backdrop-blur-md"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -44,8 +44,8 @@ export const Navigation = () => {
           <Link to="/" className="flex items-center space-x-3">
             <img src={logo} alt="Royal LePage" className="h-12 w-auto" />
             <div className="hidden md:block">
-              <div className="text-foreground font-bold text-lg">Nalin Saigal</div>
-              <div className="text-muted-foreground text-xs">Sales Representative</div>
+              <div className={`font-bold text-lg transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}>Nalin Sharma</div>
+              <div className={`text-xs transition-colors ${isScrolled ? "text-muted-foreground" : "text-slate-300"}`}>Sales Representative</div>
             </div>
           </Link>
 
@@ -55,23 +55,23 @@ export const Navigation = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-medium transition-colors hover:text-accent ${
                   location.pathname === link.to
-                    ? "text-primary"
-                    : "text-foreground"
+                    ? "text-accent"
+                    : isScrolled ? "text-foreground" : "text-white"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
-            <Button onClick={scrollToContact} size="sm">
+            <Button onClick={scrollToContact} size="sm" className="bg-accent hover:bg-accent/90 text-white">
               Contact
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className={`md:hidden transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

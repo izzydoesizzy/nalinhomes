@@ -4,31 +4,31 @@ export const ResultsDashboard = () => {
   const stats = [
     {
       icon: TrendingUp,
-      value: "115%",
-      label: "Average Sale Price",
-      description: "Of asking price across all properties",
+      value: "177%",
+      label: "Highest Sale Price",
+      description: "63 Constance Ave - $1M over asking",
       color: "text-accent",
     },
     {
       icon: Clock,
-      value: "6 Days",
+      value: "6-8 Days",
       label: "Average Time on Market",
-      description: "Significantly faster than market average",
+      description: "Most properties sell within a week",
       color: "text-primary",
     },
     {
       icon: Target,
-      value: "145%",
-      label: "Highest Sale Price",
-      description: "502 Annette Street record",
+      value: "41 Offers",
+      label: "Record Number of Offers",
+      description: "Creating competitive bidding wars",
       color: "text-accent",
     },
     {
       icon: Award,
-      value: "100%",
-      label: "Client Satisfaction",
-      description: "Every seller achieved their goals",
-      color: "text-primary",
+      value: "Top 3%",
+      label: "Diamond Status Agents",
+      description: "Out of 18,000 Royal LePage agents",
+      color: "text-amber-500",
     },
   ];
 
