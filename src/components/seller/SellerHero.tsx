@@ -30,13 +30,10 @@ export const SellerHero = () => {
             <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
               Selling With Confidence
             </h1>
-            <p className="text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto mb-4">
-              Understanding your needs first, then delivering exceptional results
+            <p className="text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto mb-8">
+              Strategic marketing and Harvard-trained negotiation delivering exceptional results across Toronto
             </p>
-            <p className="text-lg text-slate-300 max-w-2xl mx-auto mb-8">
-              Why are you selling? Where are you living next? Let's start with what matters to you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex justify-center">
               <Button
                 size="lg"
                 onClick={scrollToValuation}
@@ -44,40 +41,31 @@ export const SellerHero = () => {
               >
                 Get My Free Home Value Report
               </Button>
-              <p className="text-sm text-slate-300">⏰ Limited spots - Only taking 3 new clients this month</p>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 py-6 bg-white/10 border-white text-white hover:bg-white/20"
-                onClick={() => {
-                  const resultsSection = document.getElementById("results");
-                  if (resultsSection) {
-                    resultsSection.scrollIntoView({ behavior: "smooth" });
-                  }
-                }}
-              >
-                View Results
-              </Button>
             </div>
           </div>
 
-          {/* Quick Stats - Emphasize 177% */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 items-center">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 text-center border border-white/20">
-              <Clock className="h-10 w-10 text-accent mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-2">6-8 Days</div>
-              <div className="text-slate-200 text-sm">Average Time on Market</div>
+          {/* Quick Stats - Condensed Row */}
+          <div className="flex flex-wrap justify-center gap-8 mt-16">
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
+              <Clock className="h-8 w-8 text-accent" />
+              <div>
+                <div className="text-2xl font-bold text-white">6-8 Days</div>
+                <div className="text-slate-200 text-xs">Avg. Time on Market</div>
+              </div>
             </div>
-            <div className="bg-gradient-to-br from-amber-500/20 to-amber-600/20 backdrop-blur-md rounded-lg p-8 text-center border-2 border-amber-400/50 shadow-xl shadow-amber-500/20">
-              <TrendingUp className="h-16 w-16 text-amber-400 mx-auto mb-4" />
-              <div className="text-6xl font-black text-amber-400 mb-2">177%</div>
-              <div className="text-white text-lg font-semibold mb-1">of Asking Price</div>
-              <div className="text-slate-300 text-sm">Record Sale - 63 Constance Ave</div>
+            <div className="flex items-center gap-3 bg-gradient-to-br from-amber-500/20 to-amber-600/20 backdrop-blur-md rounded-full px-6 py-3 border-2 border-amber-400/50">
+              <TrendingUp className="h-8 w-8 text-amber-400" />
+              <div>
+                <div className="text-2xl font-bold text-amber-400">177%</div>
+                <div className="text-white text-xs">Record Sale</div>
+              </div>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 text-center border border-white/20">
-              <DollarSign className="h-10 w-10 text-accent mx-auto mb-3" />
-              <div className="text-3xl font-bold text-white mb-2">92%</div>
-              <div className="text-slate-200 text-sm">From Referrals & Repeat Clients</div>
+            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
+              <DollarSign className="h-8 w-8 text-accent" />
+              <div>
+                <div className="text-2xl font-bold text-white">92%</div>
+                <div className="text-slate-200 text-xs">Referrals & Repeat</div>
+              </div>
             </div>
           </div>
         </div>
