@@ -59,21 +59,21 @@ export const AboutNalin = () => {
             <div className="space-y-6">
               <div>
                 <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
-                  The Agent Who Gets Sellers $1M+ Over Asking
+                  Why Work With Nalin Sharma?
                 </h2>
                 <div className="h-1 w-24 bg-accent rounded-full mb-6"></div>
               </div>
 
               <p className="text-lg text-foreground leading-relaxed font-medium">
-                In 2019, I sold 63 Constance Avenue for <span className="text-amber-600 font-bold">$2.3M</span>—<span className="text-amber-600 font-bold">$1M over asking</span> with <span className="text-accent font-bold">41 offers</span>. Not luck. Strategic pricing and Harvard-trained negotiation.
+                We're a small, experienced team in Toronto with over <span className="text-accent font-bold">50 years of combined real estate experience</span>. We specialize in downtown core & West End, but sell properties across the GTA.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                My proven system creates bidding wars that maximize your sale price.
+                <span className="text-accent font-bold">99% of our business comes from word of mouth</span> and we have client relationships spanning 3 generations. Our clients range from first-time condo buyers to investors purchasing multi-million dollar homes.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                With 98 successful transactions, 92% from referrals—people who got results and told friends.
+                We take time to understand your needs and motivations before offering advice. You'll be treated professionally, respectfully—like family.
               </p>
 
               {/* Key Achievements as Badges */}

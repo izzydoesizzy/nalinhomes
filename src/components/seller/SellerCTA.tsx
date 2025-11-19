@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { CheckCircle, Home, TrendingUp, Clock } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export const SellerCTA = () => {
@@ -25,10 +25,10 @@ export const SellerCTA = () => {
   };
 
   const benefits = [
-    "Custom pricing strategy maximizing your sale price",
-    "Market analysis showing recent comparable sales",
-    "Marketing plan creating bidding wars",
-    "Free consultation worth $500 with zero obligation",
+    "Understanding your needs and motivations first",
+    "Professional guidance through every step",
+    "Access to proven marketing strategies",
+    "Treated like family—not just a transaction",
   ];
 
   return (
@@ -51,67 +51,21 @@ export const SellerCTA = () => {
             {/* Left Column - Benefits */}
             <div className="text-white">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-                Get Your Free $1M+ Home Value Report
+                Let's Work Together
               </h2>
-              <p className="text-lg text-slate-200 mb-2">
-                See your home's value with my proven strategy
-              </p>
-              <p className="text-base text-slate-300 mb-8">
-                No obligation, no pressure—just real data and expert analysis.
+              <p className="text-lg text-slate-200 mb-8">
+                Get your free home valuation and personalized selling consultation
               </p>
 
-              {/* Urgency Banner */}
-              <div className="bg-amber-500/20 border border-amber-400/50 rounded-lg p-4 mb-8">
-                <div className="flex items-center gap-2 text-amber-300">
-                  <span className="text-xl">⏰</span>
-                  <span className="font-semibold">Limited availability: Only 3 consultations available this week</span>
-                </div>
-              </div>
+              {/* Urgency Banner - removed to match presentation style */}
 
-              <div className="space-y-4 mb-8">
+              <div className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                     <span className="text-lg text-slate-200">{benefit}</span>
                   </div>
                 ))}
-              </div>
-
-              {/* Trust Badges */}
-              <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
-                <div className="text-sm text-slate-300 mb-3 font-semibold">TRUSTED BY TORONTO SELLERS:</div>
-                <div className="grid grid-cols-3 gap-4 text-center">
-                  <div>
-                    <div className="text-2xl font-bold text-white">98</div>
-                    <div className="text-xs text-slate-400">Successful Sales</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-white">92%</div>
-                    <div className="text-xs text-slate-400">Referral Rate</div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-white">Top 3%</div>
-                    <div className="text-xs text-slate-400">Diamond Agent</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-4 mt-6">
-                <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 text-center">
-                  <TrendingUp className="h-8 w-8 text-accent mx-auto mb-2" />
-                  <div className="text-2xl font-bold">115%</div>
-                  <div className="text-sm text-slate-300">Avg. Sale</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 text-center">
-                  <Clock className="h-8 w-8 text-accent mx-auto mb-2" />
-                  <div className="text-2xl font-bold">6 Days</div>
-                  <div className="text-sm text-slate-300">Avg. Time</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 text-center">
-                  <Home className="h-8 w-8 text-accent mx-auto mb-2" />
-                  <div className="text-2xl font-bold">16+</div>
-                  <div className="text-sm text-slate-300">Properties</div>
-                </div>
               </div>
             </div>
 
