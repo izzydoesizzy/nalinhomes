@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { SellerHero } from "@/components/seller/SellerHero";
+import { AboutNalin } from "@/components/seller/AboutNalin";
 import { ResultsDashboard } from "@/components/seller/ResultsDashboard";
 import { TeamCredentials } from "@/components/seller/TeamCredentials";
 import { CaseStudies } from "@/components/seller/CaseStudies";
@@ -13,6 +14,7 @@ const Sellers = () => {
     <div className="min-h-screen">
       <Navigation />
       <SellerHero />
+      <AboutNalin />
       <ResultsDashboard />
       <TeamCredentials />
       <CaseStudies />

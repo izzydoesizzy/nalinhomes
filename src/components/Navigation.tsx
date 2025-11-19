@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/royal-lepage-logo.svg";
+import logoWhite from "@/assets/royal-lepage-logo-white.png";
 
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,17 +36,21 @@ export const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/95 backdrop-blur-md shadow-lg"
-          : "bg-slate-900/80 backdrop-blur-md"
+          : "bg-transparent backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="Royal LePage" className="h-12 w-auto" />
+            <img 
+              src={isScrolled ? logo : logoWhite} 
+              alt="Royal LePage" 
+              className="h-12 w-auto transition-opacity duration-300" 
+            />
             <div className="hidden md:block">
               <div className={`font-bold text-lg transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}>Nalin Sharma</div>
-              <div className={`text-xs transition-colors ${isScrolled ? "text-muted-foreground" : "text-slate-300"}`}>Sales Representative</div>
+              <div className={`text-xs transition-colors ${isScrolled ? "text-muted-foreground" : "text-white/80"}`}>Sales Representative</div>
             </div>
           </Link>
 
@@ -64,7 +69,14 @@ export const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <Button onClick={scrollToContact} size="sm" className="bg-accent hover:bg-accent/90 text-white">
+            <Button 
+              onClick={scrollToContact} 
+              size="sm" 
+              className={isScrolled 
+                ? "bg-accent hover:bg-accent/90 text-white" 
+                : "bg-white hover:bg-white/90 text-slate-900 border-white"
+              }
+            >
               Contact
             </Button>
           </div>
