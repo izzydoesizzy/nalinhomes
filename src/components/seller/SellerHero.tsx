@@ -62,18 +62,18 @@ export const SellerHero = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
             <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 text-center border border-white/20">
               <TrendingUp className="h-12 w-12 text-accent mx-auto mb-4" />
-              <div className="text-4xl font-bold text-white mb-2">115%</div>
-              <div className="text-slate-200">Average Sale Price</div>
+              <div className="text-4xl font-bold text-white mb-2">Top 3%</div>
+              <div className="text-slate-200">Diamond Status Agents</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 text-center border border-white/20">
               <Clock className="h-12 w-12 text-accent mx-auto mb-4" />
-              <div className="text-4xl font-bold text-white mb-2">6 Days</div>
-              <div className="text-slate-200">Average on Market</div>
+              <div className="text-4xl font-bold text-white mb-2">92%</div>
+              <div className="text-slate-200">From Referrals & Repeat Clients</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 text-center border border-white/20">
               <DollarSign className="h-12 w-12 text-accent mx-auto mb-4" />
-              <div className="text-4xl font-bold text-white mb-2">16+</div>
-              <div className="text-slate-200">Properties Sold</div>
+              <div className="text-4xl font-bold text-white mb-2">98</div>
+              <div className="text-slate-200">Successful Transactions</div>
             </div>
           </div>
         </div>
