@@ -10,7 +10,7 @@ export const TeamCredentials = () => {
               Experience You Can Trust
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Three generations of real estate excellence, working together to exceed your expectations
+              Proven track record of delivering exceptional results with expert negotiation and strategic marketing
             </p>
           </div>
 
@@ -19,25 +19,20 @@ export const TeamCredentials = () => {
             <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-8 border border-primary/20">
               <Users className="h-12 w-12 text-primary mb-6" />
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                The Sharma Team
+                Our Team
               </h3>
               <p className="text-muted-foreground mb-6">
-                Our team consists of Nalin Sharma, Niraj Sharma (father), and Jermaine Bain. 
-                Together, we combine decades of experience with cutting-edge marketing strategies 
-                to deliver exceptional results for every client.
+                Working with trusted colleague Jermaine Bain, we combine deep market expertise 
+                with cutting-edge marketing strategies to deliver exceptional results for every client.
               </p>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <div className="bg-primary/20 rounded-full w-2 h-2 mt-2"></div>
-                  <p className="text-foreground"><strong>Niraj Sharma:</strong> In real estate since 1973, one of the most highly regarded realtors in Toronto&apos;s West End</p>
+                  <p className="text-foreground"><strong>Nalin Sharma:</strong> Lead agent with 98 successful transactions. 92% of business from referrals and repeat clients. Master Certified Negotiation Expert with Diamond status achievement (Top 3% of Royal LePage agents).</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="bg-primary/20 rounded-full w-2 h-2 mt-2"></div>
-                  <p className="text-foreground"><strong>Nalin Sharma:</strong> Master Certified Negotiation Expert with 98 transactions</p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="bg-primary/20 rounded-full w-2 h-2 mt-2"></div>
-                  <p className="text-foreground"><strong>Jermaine Bain:</strong> Dedicated team member bringing fresh perspectives and energy</p>
+                  <p className="text-foreground"><strong>Jermaine Bain:</strong> Trusted colleague providing exceptional support and market expertise</p>
                 </div>
               </div>
             </div>
@@ -78,9 +73,9 @@ export const TeamCredentials = () => {
 
             <div className="text-center p-8 bg-card rounded-lg border border-border">
               <Award className="h-12 w-12 text-amber-600 mx-auto mb-4" />
-              <div className="text-4xl font-bold text-foreground mb-2">50+ Years</div>
-              <div className="text-muted-foreground">Combined Experience</div>
-              <p className="text-sm text-muted-foreground mt-2">Since 1973</p>
+              <div className="text-4xl font-bold text-foreground mb-2">10+</div>
+              <div className="text-muted-foreground">Years of Excellence</div>
+              <p className="text-sm text-muted-foreground mt-2">Since 2013</p>
             </div>
           </div>
 

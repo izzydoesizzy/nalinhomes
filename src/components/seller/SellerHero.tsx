@@ -11,7 +11,7 @@ export const SellerHero = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -23,7 +23,7 @@ export const SellerHero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-32 pb-16">
+      <div className="relative z-10 container mx-auto px-4 pb-16">
         <div className="max-w-6xl mx-auto">
           {/* Main Heading */}
           <div className="text-center mb-12">
