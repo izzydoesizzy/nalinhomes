@@ -1,8 +1,11 @@
 import { Navigation } from "@/components/Navigation";
 import { SellerHero } from "@/components/seller/SellerHero";
 import { AboutNalin } from "@/components/seller/AboutNalin";
+import { SellerTestimonials } from "@/components/seller/SellerTestimonials";
 import { MarketingStrategy } from "@/components/seller/MarketingStrategy";
+import { SellerTeam } from "@/components/seller/SellerTeam";
 import { CaseStudies } from "@/components/seller/CaseStudies";
+import { SellerFAQ } from "@/components/seller/SellerFAQ";
 import { SellerCTA } from "@/components/seller/SellerCTA";
 import { Footer } from "@/components/Footer";
 
@@ -12,8 +15,11 @@ const Sellers = () => {
       <Navigation />
       <SellerHero />
       <AboutNalin />
+      <SellerTestimonials />
       <MarketingStrategy />
+      <SellerTeam />
       <CaseStudies />
+      <SellerFAQ />
       <SellerCTA />
       <Footer />
     </div>
