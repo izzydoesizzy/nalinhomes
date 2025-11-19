@@ -25,10 +25,10 @@ export const SellerCTA = () => {
   };
 
   const benefits = [
-    "Free, no-obligation home valuation",
-    "Personalized marketing strategy",
-    "Data-driven pricing analysis",
-    "24-hour response guarantee",
+    "Custom pricing strategy to maximize your sale price",
+    "Competitive market analysis showing recent comparable sales",
+    "Marketing plan that creates bidding wars",
+    "Free consultation ($500 value) with zero obligation",
   ];
 
   return (
@@ -46,16 +46,27 @@ export const SellerCTA = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-[80%] mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Benefits */}
             <div className="text-white">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Get Your Free Home Valuation
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
+                Get Your Free $1M+ Home Value Report
               </h2>
-              <p className="text-xl text-slate-200 mb-8">
-                Find out what your property is worth in today's market with a comprehensive analysis from an expert who consistently delivers results.
+              <p className="text-lg text-slate-200 mb-2">
+                See what your home could sell for with my proven strategy
               </p>
+              <p className="text-base text-slate-300 mb-8">
+                No obligation, no pressure—just real data and expert analysis.
+              </p>
+
+              {/* Urgency Banner */}
+              <div className="bg-amber-500/20 border border-amber-400/50 rounded-lg p-4 mb-8">
+                <div className="flex items-center gap-2 text-amber-300">
+                  <span className="text-xl">⏰</span>
+                  <span className="font-semibold">Limited availability: Only 3 consultations available this week</span>
+                </div>
+              </div>
 
               <div className="space-y-4 mb-8">
                 {benefits.map((benefit, index) => (
@@ -66,7 +77,26 @@ export const SellerCTA = () => {
                 ))}
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
+              {/* Trust Badges */}
+              <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 border border-white/20">
+                <div className="text-sm text-slate-300 mb-3 font-semibold">TRUSTED BY TORONTO SELLERS:</div>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-white">98</div>
+                    <div className="text-xs text-slate-400">Successful Sales</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white">92%</div>
+                    <div className="text-xs text-slate-400">Referral Rate</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-white">Top 3%</div>
+                    <div className="text-xs text-slate-400">Diamond Agent</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4 mt-6">
                 <div className="bg-white/10 backdrop-blur-md rounded-lg p-4 text-center">
                   <TrendingUp className="h-8 w-8 text-accent mx-auto mb-2" />
                   <div className="text-2xl font-bold">115%</div>

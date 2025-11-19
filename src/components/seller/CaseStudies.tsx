@@ -83,91 +83,89 @@ export const CaseStudies = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-[80%] mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Real Results, Real Stories
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+              How I Get Top Dollar: 6 Recent Sales
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Every property has unique challenges. Here&apos;s how we turned obstacles into outstanding results.
+              Real properties, real strategies, real results. See exactly how strategic pricing and expert negotiation delivered record-breaking outcomes.
             </p>
           </div>
 
-          <div className="space-y-8">
-          {caseStudies.map((study, index) => (
-            <div
-              key={index}
-              className="bg-white/5 backdrop-blur-md rounded-lg border border-white/10 overflow-hidden hover:border-accent/50 transition-all duration-300"
-            >
-              {/* Property Image Placeholder */}
-              <div className="aspect-video bg-gradient-to-br from-slate-700 to-slate-800 relative">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold text-slate-500 mb-2">
-                      {study.address.split(' ')[0]}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {caseStudies.map((study, index) => {
+              // Calculate percentage over asking
+              const listedPrice = parseFloat(study.listed.replace(/[$,]/g, ''));
+              const soldPrice = parseFloat(study.sold.replace(/[$,]/g, ''));
+              const percentageOfAsking = Math.round((soldPrice / listedPrice) * 100);
+              const isOverAsking = percentageOfAsking > 100;
+              
+              return (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-md rounded-lg overflow-hidden border border-white/10 hover:border-accent/50 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  {/* Property Image Placeholder with Price Overlay */}
+                  <div className="relative h-48 bg-gradient-to-br from-slate-700 to-slate-800">
+                    <div className="absolute inset-0 flex items-center justify-center text-slate-500">
+                      <div className="text-center">
+                        <div className="text-sm mb-2">Property Image</div>
+                        <div className="text-xs text-slate-600">{study.image}</div>
+                      </div>
                     </div>
-                    <div className="text-sm text-slate-400">Property Image Placeholder</div>
+                    <div className="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                      {study.sold} SOLD
+                    </div>
+                    {isOverAsking && (
+                      <div className="absolute top-4 left-4 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold">
+                        {percentageOfAsking}% of Asking
+                      </div>
+                    )}
                   </div>
-                </div>
-              </div>
 
-              <div className="grid lg:grid-cols-3 gap-6 p-8">
-                {/* Left Column - Stats */}
-                <div className="lg:border-r border-white/10 pr-6">
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    {study.address}
-                  </h3>
-                  
-                  <div className="space-y-4">
+                  {/* Property Details */}
+                  <div className="p-6 space-y-4">
                     <div>
-                      <div className="text-sm text-slate-400 mb-1">Listed</div>
-                      <div className="text-lg font-semibold text-white">{study.listed}</div>
-                    </div>
-                    
-                    <div>
-                      <div className="text-sm text-slate-400 mb-1">Sold</div>
-                      <div className="text-2xl font-bold text-accent">{study.sold}</div>
-                    </div>
-                    
-                    <div className="flex items-center gap-2 bg-accent/20 rounded-lg p-3">
-                      <Users className="h-5 w-5 text-accent" />
-                      <div>
-                        <div className="text-2xl font-bold text-white">{study.offers}</div>
-                        <div className="text-xs text-slate-300">Offers</div>
+                      <h3 className="text-xl font-bold text-white mb-2">
+                        {study.address}
+                      </h3>
+                      <div className="flex items-center gap-3 text-sm text-slate-300">
+                        <span>Listed: {study.listed}</span>
+                        <span>•</span>
+                        <span className="flex items-center gap-1">
+                          <Users className="h-4 w-4" />
+                          {study.offers} Offers
+                        </span>
                       </div>
                     </div>
 
-                    <div className="bg-amber-500/20 rounded-lg p-3 border border-amber-500/30">
-                      <div className="flex items-start gap-2">
-                        <TrendingUp className="h-4 w-4 text-amber-400 mt-1 flex-shrink-0" />
-                        <div className="text-sm text-amber-100">{study.highlight}</div>
+                    <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3">
+                      <div className="text-xs text-emerald-400 font-semibold mb-1">THE RESULT</div>
+                      <div className="text-sm text-white font-semibold">{study.highlight}</div>
+                    </div>
+
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <AlertCircle className="h-4 w-4 text-amber-400" />
+                        <h4 className="font-bold text-white text-sm">The Challenge</h4>
                       </div>
+                      <p className="text-xs text-slate-300 leading-relaxed">
+                        {study.challenge}
+                      </p>
+                    </div>
+
+                    <div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <CheckCircle className="h-4 w-4 text-emerald-400" />
+                        <h4 className="font-bold text-white text-sm">My Strategy</h4>
+                      </div>
+                      <p className="text-xs text-slate-300 leading-relaxed">
+                        {study.solution}
+                      </p>
                     </div>
                   </div>
                 </div>
-
-                {/* Middle Column - Challenge */}
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <AlertCircle className="h-5 w-5 text-red-400" />
-                    <h4 className="text-lg font-bold text-white">The Challenge</h4>
-                  </div>
-                  <p className="text-slate-300 text-sm leading-relaxed">
-                    {study.challenge}
-                  </p>
-                </div>
-
-                {/* Right Column - Solution */}
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <CheckCircle className="h-5 w-5 text-accent" />
-                    <h4 className="text-lg font-bold text-white">The Solution</h4>
-                  </div>
-                  <p className="text-slate-300 text-sm leading-relaxed">
-                    {study.solution}
-                  </p>
-                </div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <div className="mt-12 text-center">
