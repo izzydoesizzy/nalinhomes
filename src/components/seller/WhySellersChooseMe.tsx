@@ -30,7 +30,7 @@ export const WhySellersChooseMe = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(71,85,105,0.4),transparent_60%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(30,41,59,0.5),transparent_60%)]"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-[80%] mx-auto space-y-16">
+        <div className="w-full lg:max-w-[80%] mx-auto space-y-16">
           <div>
             <h3 className="text-3xl font-bold text-white mb-4 text-center">Why Sellers Choose Me</h3>
             <p className="text-lg text-slate-300 mb-12 text-center max-w-3xl mx-auto">

@@ -5,7 +5,7 @@ export const AboutNalin = () => {
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-[80%] mx-auto">
+        <div className="w-full lg:max-w-[80%] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Photo Section */}
             <div className="relative">

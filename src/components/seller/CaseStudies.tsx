@@ -43,7 +43,7 @@ export const CaseStudies = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-[80%] mx-auto">
+        <div className="w-full lg:max-w-[80%] mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
               Real Results: Going Above & Beyond
