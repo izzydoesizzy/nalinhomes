@@ -25,10 +25,11 @@ export const SellerCTA = () => {
   };
 
   const benefits = [
-    "Understanding your needs and motivations first",
-    "Professional guidance through every step",
-    "Access to proven marketing strategies",
-    "Treated like family—not just a transaction",
+    "I cover upfront costs (staging, photography, cleaning)",
+    "Done-for-you service—I coordinate everything",
+    "Personal outreach to every showing agent for feedback",
+    "Calm, consultative approach—never pushy",
+    "99% word of mouth, 3 generations of client relationships",
   ];
 
   return (
@@ -51,10 +52,10 @@ export const SellerCTA = () => {
             {/* Left Column - Benefits */}
             <div className="text-white">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-                Let's Work Together
+                Ready to Sell Without the Stress?
               </h2>
               <p className="text-lg text-slate-200 mb-8">
-                Get your free home valuation and personalized selling consultation
+                Let's start with a no-pressure consultation to understand your situation and goals. I'm here to help, not to push.
               </p>
 
               {/* Urgency Banner - removed to match presentation style */}

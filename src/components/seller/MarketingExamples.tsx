@@ -52,20 +52,22 @@ export const MarketingExamples = () => {
   ];
 
   return (
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(71,85,105,0.4),transparent_60%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(30,41,59,0.5),transparent_60%)]"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-[80%] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
-              Our Marketing In Action
+            <h2 className="text-3xl font-bold text-white mb-4">
+              What Buyers See When We're Done
             </h2>
-            <p className="text-lg text-muted-foreground">
-              See the quality and attention to detail in every listing
+            <p className="text-lg text-slate-300">
+              From lived-in to show-ready: see the transformation quality that attracts serious buyers
             </p>
           </div>
 
           <Tabs defaultValue="staging" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8">
+            <TabsList className="grid w-full grid-cols-3 mb-8 bg-slate-800 border border-slate-700">
               <TabsTrigger value="staging" className="flex items-center gap-2">
                 <Home className="h-4 w-4" />
                 Staging
@@ -82,12 +84,12 @@ export const MarketingExamples = () => {
 
             <TabsContent value="staging" className="space-y-8">
               {stagingExamples.map((example, index) => (
-                <Card key={index} className="overflow-hidden">
+                <Card key={index} className="overflow-hidden bg-slate-800/50 border-slate-700 hover:border-slate-600 transition-all">
                   <CardContent className="p-6">
-                    <h3 className="text-2xl font-bold text-foreground mb-4">{example.title}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-4">{example.title}</h3>
                     <div className="grid md:grid-cols-2 gap-6 mb-4">
                       <div>
-                        <p className="text-sm font-semibold text-muted-foreground mb-2">BEFORE</p>
+                        <p className="text-sm font-semibold text-slate-400 mb-2">BEFORE</p>
                         <img
                           src={example.before}
                           alt={`${example.title} - Before`}
@@ -103,7 +105,7 @@ export const MarketingExamples = () => {
                         />
                       </div>
                     </div>
-                    <p className="text-muted-foreground">{example.description}</p>
+                    <p className="text-slate-300">{example.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -112,16 +114,16 @@ export const MarketingExamples = () => {
             <TabsContent value="photography" className="space-y-6">
               <div className="grid md:grid-cols-3 gap-6">
                 {photographyExamples.map((example, index) => (
-                  <Card key={index} className="overflow-hidden hover:border-accent/50 transition-all">
-                    <CardContent className="p-0">
+                <Card key={index} className="overflow-hidden bg-slate-800/50 border-slate-700 hover:border-slate-600 transition-all">
+                  <CardContent className="p-0">
                       <img
                         src={example.image}
                         alt={example.title}
                         className="w-full h-64 object-cover"
                       />
                       <div className="p-4">
-                        <h3 className="text-lg font-bold text-foreground mb-2">{example.title}</h3>
-                        <p className="text-sm text-muted-foreground">{example.description}</p>
+                        <h3 className="text-lg font-bold text-white mb-2">{example.title}</h3>
+                        <p className="text-sm text-slate-300">{example.description}</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -131,22 +133,22 @@ export const MarketingExamples = () => {
 
             <TabsContent value="descriptions" className="space-y-6">
               {listingExamples.map((example, index) => (
-                <Card key={index}>
+                <Card key={index} className="bg-slate-800/50 border-slate-700 hover:border-slate-600 transition-all">
                   <CardContent className="p-6">
                     <div className="mb-4">
                       <p className="text-sm font-semibold text-accent mb-2">{example.address}</p>
-                      <h3 className="text-2xl font-bold text-foreground mb-3">{example.headline}</h3>
-                      <p className="text-muted-foreground leading-relaxed mb-4">
+                      <h3 className="text-2xl font-bold text-white mb-3">{example.headline}</h3>
+                      <p className="text-slate-300 leading-relaxed mb-4">
                         {example.description}
                       </p>
                     </div>
                     <div className="border-t border-border pt-4">
-                      <p className="text-sm font-semibold text-foreground mb-2">Key Highlights:</p>
+                      <p className="text-sm font-semibold text-white mb-2">Key Highlights:</p>
                       <div className="grid grid-cols-2 gap-2">
                         {example.highlights.map((highlight, idx) => (
                           <div key={idx} className="flex items-center gap-2">
                             <div className="h-1.5 w-1.5 rounded-full bg-accent"></div>
-                            <span className="text-sm text-muted-foreground">{highlight}</span>
+                            <span className="text-sm text-slate-300">{highlight}</span>
                           </div>
                         ))}
                       </div>

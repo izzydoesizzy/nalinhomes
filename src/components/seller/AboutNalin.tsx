@@ -1,92 +1,80 @@
-import { Star, Users, Award, TrendingUp, MessageCircle } from "lucide-react";
+import { DollarSign, Users, Heart, TrendingUp } from "lucide-react";
 import nalinPhoto from "@/assets/nalin-photo.png";
 
 export const AboutNalin = () => {
   return (
-    <section id="about" className="py-24 bg-background">
+    <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-[80%] mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Left Column - Photo and Credentials */}
-            <div className="space-y-6">
-              <div className="relative">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Photo Section */}
+            <div className="relative">
+              <div className="aspect-square max-w-md mx-auto rounded-xl overflow-hidden shadow-lg">
                 <img
                   src={nalinPhoto}
-                  alt="Nalin Sharma - Real Estate Broker"
-                  className="rounded-2xl shadow-2xl w-full"
+                  alt="Nalin Sharma - Toronto Real Estate Broker"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex gap-3">
-                  <div className="bg-accent text-accent-foreground px-6 py-3 rounded-full shadow-lg font-semibold text-sm whitespace-nowrap">
-                    Licensed Real Estate Broker
-                  </div>
-                </div>
               </div>
-              
-              <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 mt-8">
-                <div className="flex items-center gap-2 mb-2">
-                  <Star className="h-5 w-5 text-amber-600 fill-amber-600" />
-                  <h3 className="font-bold text-amber-900">Master Negotiation Expert</h3>
+              <div className="text-center mt-6">
+                <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full font-semibold">
+                  <span>✓</span> Licensed Real Estate Broker
                 </div>
-                <p className="text-sm text-amber-800">
-                  48 hours of negotiation training based on models of the Harvard Negotiation Program
-                </p>
               </div>
             </div>
 
-            {/* Right Column - About Text */}
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4">
-                  Why Work With Nalin Sharma?
-                </h2>
-                <div className="h-1 w-24 bg-accent rounded-full mb-6"></div>
+            {/* Content Section */}
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+                Hi, I'm Nalin Sharma
+              </h2>
+              <div className="space-y-4 text-lg text-muted-foreground">
+                <p className="text-xl text-foreground font-semibold">
+                  Selling your home doesn't have to be overwhelming.
+                </p>
+                <p>
+                  My approach is warm, hands-on, and truly done-for-you. I take care of every detail—from preparation and staging to marketing and negotiations—so you can focus on your next chapter.
+                </p>
+                <p>
+                  I've spent 10+ years assembling an "ecosystem of good humans"—trusted stagers, photographers, cleaners, and contractors who treat you and your home with respect. <strong className="text-foreground">I cover the upfront costs</strong> because I believe in investing in your success.
+                </p>
+                
+                {/* Family Legacy */}
+                <div className="bg-accent/5 border-l-4 border-accent pl-4 py-3 rounded">
+                  <p className="text-foreground italic">
+                    Still a family business at heart—my father's been in real estate since 1973. 50 years of combined experience serving Toronto families.
+                  </p>
+                </div>
               </div>
 
-              <p className="text-lg text-foreground leading-relaxed">
-                We're a small, experienced team with <span className="text-accent font-bold">50 years of combined experience</span> in Toronto real estate. We specialize in downtown core & West End properties.
-              </p>
-
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                We understand your needs first, then deliver results. You'll be treated professionally, respectfully—like family.
-              </p>
-              
-              <div className="bg-accent/5 border border-accent/20 rounded-xl p-6 mt-6">
-                <p className="text-lg text-foreground italic">
-                  "Why are you selling? Where are you living next? What's most important to you in a realtor?"
-                </p>
-                <p className="text-sm text-muted-foreground mt-2">
-                  These are the questions we start with—because understanding you is how we deliver exceptional results.
-                </p>
-              </div>
-
-              {/* Key Achievements - Compact Badges */}
+              {/* Key Stats Badges */}
               <div className="flex flex-wrap gap-3 pt-6">
-                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2">
+                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 hover:border-accent transition-colors">
+                  <Users className="h-5 w-5 text-accent" />
+                  <div>
+                    <span className="font-bold text-foreground">99%</span>
+                    <span className="text-xs text-muted-foreground ml-1">Word of Mouth</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 hover:border-accent transition-colors">
+                  <Heart className="h-5 w-5 text-accent" />
+                  <div>
+                    <span className="font-bold text-foreground">3 Generations</span>
+                    <span className="text-xs text-muted-foreground ml-1">Client Relationships</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 hover:border-accent transition-colors">
+                  <DollarSign className="h-5 w-5 text-accent" />
+                  <div>
+                    <span className="font-bold text-foreground">I Pay</span>
+                    <span className="text-xs text-muted-foreground ml-1">Upfront Costs</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 hover:border-accent transition-colors">
                   <TrendingUp className="h-5 w-5 text-accent" />
                   <div>
                     <span className="font-bold text-foreground">177%</span>
                     <span className="text-xs text-muted-foreground ml-1">Record Sale</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2">
-                  <Award className="h-5 w-5 text-accent" />
-                  <div>
-                    <span className="font-bold text-foreground">23 Offers</span>
-                    <span className="text-xs text-muted-foreground ml-1">Single Property</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2">
-                  <MessageCircle className="h-5 w-5 text-accent" />
-                  <div>
-                    <span className="font-bold text-foreground">99%</span>
-                    <span className="text-xs text-muted-foreground ml-1">Referrals</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2">
-                  <Users className="h-5 w-5 text-accent" />
-                  <div>
-                    <span className="font-bold text-foreground">3 Generations</span>
-                    <span className="text-xs text-muted-foreground ml-1">Client Relationships</span>
                   </div>
                 </div>
               </div>

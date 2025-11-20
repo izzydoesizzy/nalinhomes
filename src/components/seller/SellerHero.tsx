@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { TrendingUp, Clock, DollarSign } from "lucide-react";
+import { TrendingUp, Users, DollarSign, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 
 export const SellerHero = () => {
@@ -11,61 +11,86 @@ export const SellerHero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
-          alt="Luxury Property"
+          alt="Toronto skyline"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-800/90 to-primary/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-hero-start/95 via-hero-start/85 to-hero-end/75" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pb-16">
-        <div className="max-w-[80%] mx-auto">
-          {/* Main Heading */}
+      <div className="relative z-10 container mx-auto px-4 pt-12 pb-16">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
-              Selling With Confidence
+            <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4 animate-fade-in leading-tight">
+              Sell Your Home for Top Dollar—Without the Stress
             </h1>
-            <p className="text-xl md:text-2xl text-slate-200 max-w-3xl mx-auto mb-8">
-              Strategic marketing and Harvard-trained negotiation delivering exceptional results across Toronto
+            <p className="text-lg md:text-xl text-primary-foreground/90 mb-6 animate-fade-in max-w-3xl mx-auto">
+              My warm, hands-on approach handles every detail—from staging to negotiation—so you can focus on your next chapter, not endless to-do lists.
             </p>
-            <div className="flex justify-center">
-              <Button
-                size="lg"
-                onClick={scrollToValuation}
-                className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-white"
-              >
-                Get My Free Home Value Report
-              </Button>
-            </div>
+            <Button 
+              size="lg" 
+              onClick={scrollToValuation} 
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-accent transition-all hover:scale-105"
+            >
+              Get My Free Home Valuation
+            </Button>
           </div>
 
-          {/* Quick Stats - Condensed Row */}
-          <div className="flex flex-wrap justify-center gap-8 mt-16">
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
-              <Clock className="h-8 w-8 text-accent" />
-              <div>
-                <div className="text-2xl font-bold text-white">6-8 Days</div>
-                <div className="text-slate-200 text-xs">Avg. Time on Market</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 bg-gradient-to-br from-amber-500/20 to-amber-600/20 backdrop-blur-md rounded-full px-6 py-3 border-2 border-amber-400/50">
-              <TrendingUp className="h-8 w-8 text-amber-400" />
-              <div>
-                <div className="text-2xl font-bold text-amber-400">177%</div>
-                <div className="text-white text-xs">Record Sale</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20">
-              <DollarSign className="h-8 w-8 text-accent" />
-              <div>
-                <div className="text-2xl font-bold text-white">92%</div>
-                <div className="text-slate-200 text-xs">Referrals & Repeat</div>
-              </div>
+          {/* Authority Bar */}
+          <div className="rounded-xl p-6 mb-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+              {[
+                {
+                  icon: Clock,
+                  value: "6-8 Days",
+                  label: "Avg. Time on Market",
+                  subtitle: "Significantly faster than average",
+                },
+                {
+                  icon: TrendingUp,
+                  value: "177%",
+                  label: "Record Sale",
+                  subtitle: "Of asking price achieved",
+                },
+                {
+                  icon: Users,
+                  value: "99%",
+                  label: "Word of Mouth",
+                  subtitle: "Referrals & repeat clients",
+                },
+                {
+                  icon: DollarSign,
+                  value: "I Pay",
+                  label: "Upfront Costs",
+                  subtitle: "Staging, photos, cleaning",
+                },
+              ].map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div
+                    key={index}
+                    className="text-center group hover:scale-105 transition-transform duration-300"
+                  >
+                    <div className="flex flex-col items-center gap-2">
+                      <Icon className="w-8 h-8 text-accent mb-1 group-hover:text-accent/80 transition-colors" />
+                      <div className="text-2xl md:text-3xl font-bold text-primary-foreground">
+                        {stat.value}
+                      </div>
+                      <div className="text-sm md:text-base font-semibold text-primary-foreground/95">
+                        {stat.label}
+                      </div>
+                      <div className="text-xs md:text-sm text-primary-foreground/75">
+                        {stat.subtitle}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

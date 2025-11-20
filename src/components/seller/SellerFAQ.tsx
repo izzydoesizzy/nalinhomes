@@ -8,47 +8,49 @@ import {
 export const SellerFAQ = () => {
   const faqs = [
     {
-      question: "How do you determine the best listing price?",
+      question: "Who pays for staging, cleaning, and photography?",
       answer:
-        "We conduct a comprehensive market analysis examining comparable sales, current listings, and market trends. Our strategic pricing approach generates competition among buyers while ensuring you maximize your property's value. We'll present all data and work with you to find the optimal price point.",
+        "I do. I cover all upfront costs—staging, cleaning, professional photos—because I believe in investing in your success. My philosophy is simple: doing it right benefits us both. (And I never take kickbacks from vendors—I choose them because they're the best, period.)",
     },
     {
-      question: "What makes your marketing different?",
+      question: "How long does it take to sell my home?",
       answer:
-        "We provide professional staging consultation, HD photography, custom property websites, targeted social media campaigns, and extensive agent networking. Every property receives a tailored marketing plan designed to reach qualified buyers and generate maximum interest.",
+        "Preparation can be as quick as 2 weeks if we're in a rush—I've turned homes around in 14 days when needed. Typically, plan on 2-3 weeks to get everything prepared and photographed to perfection. Once we hit the market, many of my listings attract offers within 7-10 days.",
     },
     {
-      question: "How long will it take to sell my home?",
+      question: "My home needs a lot of work... do I have to do all that before selling?",
       answer:
-        "Our average is 6-8 days on market, significantly faster than the market average. Timeline depends on pricing strategy, property condition, and current market conditions. We'll provide a realistic timeline based on your specific situation and goals.",
+        "Not on your own! I'll coordinate trusted professionals to handle it. Often, a fresh coat of paint and decluttering work wonders. You don't need to manage a thing—I handle the heavy lifting. And if there are major issues we decide not to fix, I'll strategize how to price and position your home accordingly.",
     },
     {
-      question: "What if my home needs repairs or staging?",
+      question: "Do you take kickbacks from your team members?",
       answer:
-        "We handle everything. Our team includes professional stagers, photographers, and contractors who can help prepare your home. We'll provide honest recommendations on which improvements offer the best return on investment and coordinate all services on your behalf.",
+        "Never. I have a fiduciary duty to put your interests first. I choose my photographer, stager, and other professionals because they're the absolute best at what they do—not because they pay me. This is about getting you the best result, period.",
     },
     {
       question: "How do you handle multiple offers?",
       answer:
-        "We maintain transparent communication with all parties, strategically time offer reviews to maximize competition, and leverage our Harvard-trained negotiation skills to secure the best terms. We've generated up to 23 offers on a single property through strategic marketing and positioning.",
+        "I personally call every agent for feedback and track who the serious contenders are. My approach is calm on the surface, paddling like crazy underneath. I've navigated up to 23 offers on a single property, leveraging competition to maximize your sale price while keeping you informed every step of the way.",
     },
     {
-      question: "What are your fees and what do they include?",
+      question: "What if my home is already in great shape?",
       answer:
-        "We follow standard commission structure, but what sets us apart is everything included: professional staging consultation, HD photography and videography, custom marketing materials, dedicated client support, and our proven negotiation expertise. Let's discuss your specific needs and we'll provide transparent pricing.",
+        "If your home is already picture-perfect, that's fantastic—we'll save time and you'll reap the rewards. I never push unnecessary changes. We'll still do high-quality photos and marketing, of course, but we won't fix what isn't broken. I'm not here to spend money just for the sake of it—I'm here to add value.",
     },
   ];
 
   return (
-    <section className="py-16 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section className="py-28 bg-gradient-to-b from-slate-50 via-blue-50/30 to-slate-50 dark:from-slate-950 dark:via-blue-950/20 dark:to-slate-950 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(30,64,175,0.15),transparent_60%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(15,118,110,0.12),transparent_60%)]"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-[80%] mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-3">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-800 via-blue-600 to-teal-700 dark:from-blue-400 dark:via-blue-500 dark:to-teal-400 bg-clip-text text-transparent mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-muted-foreground">
-              Everything you need to know about selling with us
+              Everything you need to know about selling with me
             </p>
           </div>
 
