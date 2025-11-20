@@ -9,6 +9,7 @@ export const SellerTestimonials = () => {
       quote:
         "I can't recommend Nalin more highly. Throughout the selling and buying process, he is kind, empathetic, patient, responsive, and diligent. When we had a family emergency, he went above and beyond to help sell my condo.",
       rating: 5,
+      type: "seller"
     },
     {
       name: "Jennifer S.",
@@ -16,6 +17,7 @@ export const SellerTestimonials = () => {
       quote:
         "Nalin is head-and-shoulders above the rest! I was endlessly impressed by his level of professionalism, his commitment, his diligence, and his attention to detail. You could not ask for a better agent to serve you.",
       rating: 5,
+      type: "seller"
     },
     {
       name: "Kirk E.",
@@ -23,6 +25,23 @@ export const SellerTestimonials = () => {
       quote:
         "Professional, highly knowledgeable and an expert negotiator, while offering world-class service. He takes care of each client like they are family and truly has their best interests at heart.",
       rating: 5,
+      type: "seller"
+    },
+    {
+      name: "Mike I.",
+      location: "Toronto",
+      quote:
+        "If you're fortunate enough to work with Nalin, you'll be impressed by his professionalism and thoughtfulness. His insights into the market and his non-pressured approach make him a pleasure to work with.",
+      rating: 5,
+      type: "character"
+    },
+    {
+      name: "Elijah D.",
+      location: "Toronto",
+      quote:
+        "He's caring and considerate, responsive, collaborative, and is motivated by human connections, not commissions. His market knowledge and calming vibe helped make a stressful situation more manageable.",
+      rating: 5,
+      type: "character"
     },
   ];
 
@@ -34,14 +53,14 @@ export const SellerTestimonials = () => {
         <div className="max-w-[80%] mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-800 via-blue-600 to-teal-700 dark:from-blue-400 dark:via-blue-500 dark:to-teal-400 bg-clip-text text-transparent mb-4">
-              What Sellers Say
+              What People Say
             </h2>
             <p className="text-lg text-muted-foreground">
-              Real feedback from clients I've helped sell their properties
+              Real feedback from clients and colleagues who know me best
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <Card key={index} className="group hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-700 bg-white dark:bg-slate-900 hover:-translate-y-1">
                 <CardContent className="p-6">

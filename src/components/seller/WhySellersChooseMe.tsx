@@ -6,22 +6,22 @@ export const WhySellersChooseMe = () => {
     {
       icon: Shield,
       title: "No Pressure, All Partnership",
-      description: "You'll never feel rushed. My consultative approach means understanding your 'why' first—then we build a strategy together.",
+      description: "You'll never feel rushed. I understand your 'why' first, then we build a strategy together that feels right for you.",
     },
     {
       icon: DollarSign,
       title: "I Pay Upfront",
-      description: "Staging, photography, cleaning—I invest 15-20% of my commission to maximize your sale. It's my commitment to doing things right.",
+      description: "Staging, photography, cleaning—I invest in maximizing your sale. It's my commitment to doing things right from the start.",
     },
     {
       icon: MessageCircle,
       title: "Constant Communication",
-      description: "I personally reach out to every agent who shows your home. You'll always know what's happening—no radio silence.",
+      description: "I personally reach out to every agent who shows your home. You'll always know what's happening—no surprises or radio silence.",
     },
     {
       icon: Heart,
       title: "Long-term Relationships",
-      description: "99% word of mouth, client relationships spanning 3 generations—my reputation is built on trust, not transactions.",
+      description: "99% word of mouth, client relationships spanning 3 generations. My reputation is built on trust, not transactions.",
     },
   ];
 
