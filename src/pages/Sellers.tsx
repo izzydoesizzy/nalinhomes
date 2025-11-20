@@ -3,7 +3,7 @@ import { SellerHero } from "@/components/seller/SellerHero";
 import { AboutNalin } from "@/components/seller/AboutNalin";
 import { StressTransformation } from "@/components/seller/StressTransformation";
 import { SellingProcess } from "@/components/seller/SellingProcess";
-import { MarketingExamples } from "@/components/seller/MarketingExamples";
+import { PropertyShowcase } from "@/components/seller/PropertyShowcase";
 import { SellerTeam } from "@/components/seller/SellerTeam";
 import { WhySellersChooseMe } from "@/components/seller/WhySellersChooseMe";
 import { CaseStudies } from "@/components/seller/CaseStudies";
@@ -20,7 +20,7 @@ const Sellers = () => {
       <AboutNalin />
       <StressTransformation />
       <SellingProcess />
-      <MarketingExamples />
+      <PropertyShowcase />
       <SellerTeam />
       <WhySellersChooseMe />
       <CaseStudies />

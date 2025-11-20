@@ -4,24 +4,24 @@ import { Star } from "lucide-react";
 export const SellerTestimonials = () => {
   const testimonials = [
     {
-      name: "Stephanie & Jeff Clayton",
-      property: "Downtown Toronto",
+      name: "Michael T.",
+      location: "Toronto",
       quote:
-        "Nalin's negotiation skills are exceptional. He got us multiple offers and helped us navigate a complex selling situation with confidence. His professionalism and attention to detail made all the difference.",
+        "I can't recommend Nalin more highly. Throughout the selling and buying process, he is kind, empathetic, patient, responsive, and diligent. When we had a family emergency, he went above and beyond to help sell my condo.",
       rating: 5,
     },
     {
-      name: "Jennifer Savage",
-      property: "Property Investor",
+      name: "Jennifer S.",
+      location: "Toronto",
       quote:
-        "As an investor, I've worked with many agents. Nalin's strategic approach to pricing and marketing consistently delivers results. He understands the market deeply and knows how to maximize value.",
+        "Nalin is head-and-shoulders above the rest! I was endlessly impressed by his level of professionalism, his commitment, his diligence, and his attention to detail. You could not ask for a better agent to serve you.",
       rating: 5,
     },
     {
-      name: "Neil Datt & Anusha Karunakaran",
-      property: "West End Toronto",
+      name: "Kirk E.",
+      location: "Toronto",
       quote:
-        "We were impressed by Nalin's consultative approach. He took time to understand our situation and goals before recommending a strategy. The result exceeded our expectations—sold over asking with multiple offers.",
+        "Professional, highly knowledgeable and an expert negotiator, while offering world-class service. He takes care of each client like they are family and truly has their best interests at heart.",
       rating: 5,
     },
   ];
@@ -55,7 +55,7 @@ export const SellerTestimonials = () => {
                   </p>
                   <div className="border-t border-border pt-4">
                     <p className="font-semibold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.property}</p>
+                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
                   </div>
                 </CardContent>
               </Card>

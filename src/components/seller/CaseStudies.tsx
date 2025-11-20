@@ -1,6 +1,4 @@
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
 
 interface CaseStudy {
   address: string;
@@ -14,79 +12,27 @@ interface CaseStudy {
 }
 
 export const CaseStudies = () => {
-  const [activeFilter, setActiveFilter] = useState<string>("all");
-
   const caseStudies: CaseStudy[] = [
-    {
-      address: "304 Barondale Drive",
-      listed: "$1,349,000",
-      sold: "$1,750,000",
-      offers: 7,
-      challenge: "Older home needing updates in competitive market",
-      solution: "Strategic staging and targeted marketing to highlight potential",
-      percentageOfAsking: 130,
-      type: "house"
-    },
     {
       address: "63 Constance Avenue",
       listed: "$999,000",
       sold: "$1,775,000",
       offers: 23,
-      challenge: "Generating unprecedented buyer interest",
-      solution: "Created buzz through exclusive previews and strategic pricing",
+      challenge: "My clients had a stunning family home that needed to stand out in a competitive market. We needed to generate serious buyer interest and create a bidding war.",
+      solution: "I coordinated professional staging to highlight the home's best features, created a comprehensive marketing campaign with stunning photography, and personally called every agent after showings. The result? Over 150 showings in one week and 23 competing offers. I navigated the chaos calmly, helping my clients evaluate every offer strategically.",
       percentageOfAsking: 177,
       type: "house"
     },
     {
-      address: "185 Roehampton Ave #1405",
-      listed: "$629,900",
-      sold: "$935,000",
-      offers: 10,
-      challenge: "Standing out in crowded condo market",
-      solution: "Professional staging and comprehensive digital marketing campaign",
-      percentageOfAsking: 148,
-      type: "condo"
-    },
-    {
-      address: "980 Yonge Street #208",
-      listed: "$649,000",
-      sold: "$800,000",
-      offers: 8,
-      challenge: "Maximizing value for renovated unit",
-      solution: "Highlighted premium finishes and location advantages",
-      percentageOfAsking: 123,
-      type: "condo"
-    },
-    {
-      address: "41 Northcote Ave",
-      listed: "$1,598,000",
-      sold: "$1,925,000",
-      offers: 5,
-      challenge: "Premium pricing strategy in established neighborhood",
-      solution: "Targeted marketing to qualified buyers and strong negotiation",
-      percentageOfAsking: 120,
-      type: "house"
-    },
-    {
-      address: "2212 Lake Shore Blvd #1808",
-      listed: "$529,000",
-      sold: "$632,000",
+      address: "Downtown Condo - Family Emergency",
+      listed: "Confidential",
+      sold: "Sold Over Asking",
       offers: 4,
-      challenge: "Competing with new developments",
-      solution: "Emphasized waterfront views and building amenities",
-      percentageOfAsking: 119,
+      challenge: "My client needed to sell his condo immediately due to a sudden family emergency. He was overwhelmed, stressed, and didn't have time to manage the usual selling process.",
+      solution: "I assured him I'd handle everything. I coordinated last-minute deep cleaning, brought in my stager on short notice, and managed all showings with sensitivity to his family's situation. Within days, we had the condo sold to the right buyer at a great price. He could focus on his family while I focused on getting him the best outcome possible.",
       type: "condo"
-    },
+    }
   ];
-
-  const filteredStudies = caseStudies.filter((study) => {
-    if (activeFilter === "all") return true;
-    if (activeFilter === "over-150") return (study.percentageOfAsking || 0) > 150;
-    if (activeFilter === "multiple-offers") return study.offers >= 7;
-    if (activeFilter === "condos") return study.type === "condo";
-    if (activeFilter === "houses") return study.type === "house";
-    return true;
-  });
 
   return (
     <section id="results" className="py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-primary/20 relative overflow-hidden">
@@ -98,95 +44,51 @@ export const CaseStudies = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-[80%] mx-auto">
-          <div className="text-center mb-8">
+          <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">
-              Recent Success Stories
+              Real Results: Going Above & Beyond
             </h2>
-            <p className="text-lg text-slate-200 mb-6">
-              Real results from Toronto properties we've sold
-            </p>
-            
-            {/* Filter Buttons */}
-            <div className="flex flex-wrap justify-center gap-3 mb-2">
-              <Button
-                variant={activeFilter === "all" ? "default" : "outline"}
-                onClick={() => setActiveFilter("all")}
-                className={activeFilter === "all" ? "" : "bg-white/10 border-white/20 text-white hover:bg-white/20"}
-              >
-                All Properties
-              </Button>
-              <Button
-                variant={activeFilter === "over-150" ? "default" : "outline"}
-                onClick={() => setActiveFilter("over-150")}
-                className={activeFilter === "over-150" ? "" : "bg-white/10 border-white/20 text-white hover:bg-white/20"}
-              >
-                Over 150% Asking
-              </Button>
-              <Button
-                variant={activeFilter === "multiple-offers" ? "default" : "outline"}
-                onClick={() => setActiveFilter("multiple-offers")}
-                className={activeFilter === "multiple-offers" ? "" : "bg-white/10 border-white/20 text-white hover:bg-white/20"}
-              >
-                Multiple Offers
-              </Button>
-              <Button
-                variant={activeFilter === "condos" ? "default" : "outline"}
-                onClick={() => setActiveFilter("condos")}
-                className={activeFilter === "condos" ? "" : "bg-white/10 border-white/20 text-white hover:bg-white/20"}
-              >
-                Condos
-              </Button>
-              <Button
-                variant={activeFilter === "houses" ? "default" : "outline"}
-                onClick={() => setActiveFilter("houses")}
-                className={activeFilter === "houses" ? "" : "bg-white/10 border-white/20 text-white hover:bg-white/20"}
-              >
-                Houses
-              </Button>
-            </div>
-            <p className="text-sm text-slate-300">
-              Showing {filteredStudies.length} of {caseStudies.length} properties
+            <p className="text-lg text-slate-200">
+              Two stories that show how I handle everything from bidding wars to family emergencies
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredStudies.map((study, index) => (
+          <div className="grid md:grid-cols-2 gap-8">
+            {caseStudies.map((study, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-accent/50 transition-all"
+                className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-accent/50 transition-all group"
               >
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-lg font-bold text-white">{study.address}</h3>
+                <div className="flex justify-between items-start mb-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{study.address}</h3>
+                    <div className="flex gap-4 text-sm">
+                      {study.listed !== "Confidential" && (
+                        <>
+                          <span className="text-slate-300">Listed: <span className="text-white font-semibold">{study.listed}</span></span>
+                          <span className="text-slate-300">•</span>
+                        </>
+                      )}
+                      <span className="text-slate-300">Sold: <span className="text-accent font-bold">{study.sold}</span></span>
+                      <span className="text-slate-300">•</span>
+                      <span className="text-slate-300">{study.offers} Offers</span>
+                    </div>
+                  </div>
                   {study.percentageOfAsking && study.percentageOfAsking > 150 && (
-                    <Badge className="bg-amber-500/20 text-amber-300 border-amber-400/50">
-                      {study.percentageOfAsking}%
+                    <Badge className="bg-amber-500/20 text-amber-300 border-amber-400/50 text-lg px-4 py-2">
+                      {study.percentageOfAsking}% of Asking
                     </Badge>
                   )}
                 </div>
-                
-                <div className="space-y-3 mb-4">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-slate-300">Listed:</span>
-                    <span className="text-white font-semibold">{study.listed}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-slate-300">Sold:</span>
-                    <span className="text-accent font-bold">{study.sold}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-slate-300">Offers:</span>
-                    <span className="text-white font-semibold">{study.offers}</span>
-                  </div>
-                </div>
 
-                <div className="border-t border-white/10 pt-4 space-y-3">
+                <div className="space-y-4">
                   <div>
-                    <p className="text-xs font-semibold text-amber-300 mb-1">The Challenge</p>
-                    <p className="text-sm text-slate-200">{study.challenge}</p>
+                    <p className="text-sm font-semibold text-amber-300 mb-2">The Challenge</p>
+                    <p className="text-slate-200 leading-relaxed">{study.challenge}</p>
                   </div>
                   <div>
-                    <p className="text-xs font-semibold text-green-300 mb-1">Our Solution</p>
-                    <p className="text-sm text-slate-200">{study.solution}</p>
+                    <p className="text-sm font-semibold text-green-300 mb-2">How I Handled It</p>
+                    <p className="text-slate-200 leading-relaxed">{study.solution}</p>
                   </div>
                 </div>
               </div>

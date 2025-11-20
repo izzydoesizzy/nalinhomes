@@ -1,44 +1,43 @@
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
-import { Camera, Home, Scale, DollarSign, ExternalLink } from "lucide-react";
+import { Camera, Home, Scale, DollarSign } from "lucide-react";
 
 export const SellerTeam = () => {
   const team = [
     {
-      name: "Lianne Epp",
       role: "Professional Photographer",
       description:
-        "She's photographed every single one of my listings for 7 years. Takes up to 4 hours for $500 vs. competitors' 40 minutes for $150—it's night and day.",
+        "Over 1,000 homes photographed with 7+ years of experience. Takes up to 4 hours per shoot ($500) vs. competitors' 40 minutes ($150)—the difference is night and day.",
       icon: Camera,
-      link: "#",
-      initials: "LE",
+      initials: "PH",
     },
     {
-      name: "Marie McGuire",
       role: "Home Staging Expert",
       description:
-        "Marie transforms homes with strategic design that helps buyers emotionally connect. She's staged 300+ properties with incredible attention to detail.",
+        "Transforms homes with strategic design that helps buyers emotionally connect. 300+ properties staged with incredible attention to detail and style.",
       icon: Home,
-      link: "#",
-      initials: "MM",
+      initials: "HS",
     },
     {
-      name: "Shelby Rowe Lautens",
       role: "Real Estate Lawyer",
       description:
-        "Shelby provides clear guidance through contracts, title transfers, and closing to protect your interests every step of the way.",
+        "Provides clear guidance through contracts, title transfers, and closing to protect your interests every step of the way.",
       icon: Scale,
-      link: "#",
-      initials: "SR",
+      initials: "LA",
     },
     {
-      name: "Lisa Elliott",
       role: "Mortgage Specialist",
       description:
-        "Lisa helps buyers secure optimal financing, making your property more accessible to qualified purchasers and facilitating smooth closings.",
+        "Helps buyers secure optimal financing, making your property more accessible to qualified purchasers and facilitating smooth closings.",
       icon: DollarSign,
-      link: "#",
-      initials: "LE",
+      initials: "MS",
+    },
+    {
+      role: "Trusted Tradespeople",
+      description:
+        "Family-run contractors and handypeople I've known for 20-30 years. They treat your home with respect and deliver quality work on time.",
+      icon: Home,
+      initials: "TR",
     },
   ];
 
@@ -57,13 +56,14 @@ export const SellerTeam = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {team.map((member, index) => {
               const colors = [
                 { gradient: 'from-blue-500 to-cyan-500', bg: 'bg-blue-50 dark:bg-blue-950/30' },
                 { gradient: 'from-emerald-500 to-teal-500', bg: 'bg-emerald-50 dark:bg-emerald-950/30' },
                 { gradient: 'from-violet-500 to-purple-500', bg: 'bg-violet-50 dark:bg-violet-950/30' },
                 { gradient: 'from-amber-500 to-orange-500', bg: 'bg-amber-50 dark:bg-amber-950/30' },
+                { gradient: 'from-rose-500 to-pink-500', bg: 'bg-rose-50 dark:bg-rose-950/30' },
               ];
               const color = colors[index % colors.length];
               
@@ -82,19 +82,11 @@ export const SellerTeam = () => {
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
                           <member.icon className="h-5 w-5 text-accent" />
-                          <h3 className="text-xl font-bold text-foreground">{member.name}</h3>
+                          <h3 className="text-xl font-bold text-foreground">{member.role}</h3>
                         </div>
-                        <p className="text-sm font-semibold text-accent mb-3">{member.role}</p>
-                        <p className="text-sm text-muted-foreground mb-3 leading-relaxed">
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                           {member.description}
                         </p>
-                        <a
-                          href={member.link}
-                          className="inline-flex items-center gap-1 text-sm text-accent hover:underline font-medium"
-                        >
-                          Learn more
-                          <ExternalLink className="h-3.5 w-3.5" />
-                        </a>
                       </div>
                     </div>
                   </CardContent>
