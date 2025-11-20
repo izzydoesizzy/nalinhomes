@@ -1,11 +1,13 @@
 import { Navigation } from "@/components/Navigation";
 import { SellerHero } from "@/components/seller/SellerHero";
 import { AboutNalin } from "@/components/seller/AboutNalin";
-import { SellerTestimonials } from "@/components/seller/SellerTestimonials";
-import { MarketingStrategy } from "@/components/seller/MarketingStrategy";
+import { StressTransformation } from "@/components/seller/StressTransformation";
+import { SellingProcess } from "@/components/seller/SellingProcess";
 import { MarketingExamples } from "@/components/seller/MarketingExamples";
 import { SellerTeam } from "@/components/seller/SellerTeam";
+import { WhySellersChooseMe } from "@/components/seller/WhySellersChooseMe";
 import { CaseStudies } from "@/components/seller/CaseStudies";
+import { SellerTestimonials } from "@/components/seller/SellerTestimonials";
 import { SellerFAQ } from "@/components/seller/SellerFAQ";
 import { SellerCTA } from "@/components/seller/SellerCTA";
 import { Footer } from "@/components/Footer";
@@ -16,11 +18,13 @@ const Sellers = () => {
       <Navigation />
       <SellerHero />
       <AboutNalin />
-      <SellerTestimonials />
-      <MarketingStrategy />
+      <StressTransformation />
+      <SellingProcess />
       <MarketingExamples />
       <SellerTeam />
+      <WhySellersChooseMe />
       <CaseStudies />
+      <SellerTestimonials />
       <SellerFAQ />
       <SellerCTA />
       <Footer />
