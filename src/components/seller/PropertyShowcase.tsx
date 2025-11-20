@@ -66,7 +66,7 @@ export const PropertyShowcase = () => {
                   <Carousel className="w-full">
                     <CarouselContent>
                       {property.images.map((image, imgIndex) => (
-                        <CarouselItem key={imgIndex} className="md:basis-1/2 lg:basis-1/3">
+                        <CarouselItem key={imgIndex} className="basis-full md:basis-1/2 lg:basis-1/3">
                           <div className="p-1">
                             <img
                               src={image}
