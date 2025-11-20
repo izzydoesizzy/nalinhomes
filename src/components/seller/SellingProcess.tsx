@@ -1,4 +1,4 @@
-import { Palette, Camera, TrendingUp } from "lucide-react";
+import { Home, Camera, TrendingUp } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const SellingProcess = () => {
@@ -7,36 +7,36 @@ export const SellingProcess = () => {
       number: 1,
       title: "Preparation",
       subtitle: "Getting Your Home Show-Ready",
-      description: "I coordinate everything to present your home at its best—professional staging, cleaners, minor repairs, decluttering support. Even if you have 40 years of belongings, I'll bring in junk removal and donation coordinators. I pay for these upfront costs—it's my investment in your success.",
-      icon: Palette,
+      description: "I visit your home and recommend what will help it shine. Whether staging, painting, or decluttering, I coordinate everything—you don't lift a finger.",
+      icon: Home,
       highlights: [
-        "Personalized home visit & honest recommendations",
-        "Coordinating stagers, cleaners, painters",
-        "I cover upfront costs (staging, photography, cleaning)"
+        "Professional staging and design",
+        "Coordinated repairs and painting",
+        "I pay all upfront costs"
       ]
     },
     {
       number: 2,
       title: "Production",
-      subtitle: "Creating Stunning Marketing Assets",
-      description: "My photographer has shot 1,000+ homes and takes up to 4 hours per listing (not 40 minutes like competitors). We create custom listing websites (e.g., 123YourStreet.com), professional photos, drone shots, floor plans, video tours, and QR codes instead of wasteful paper brochures.",
+      subtitle: "Creating Stunning Marketing",
+      description: "My photographer has shot 1,000+ homes. We create custom websites, floor plans, video tours, and QR codes to showcase your property perfectly.",
       icon: Camera,
       highlights: [
-        "Professional photography (1000+ homes experience)",
-        "Custom listing website with QR codes",
-        "Drone shots, floor plans, video tours"
+        "Professional photography and video",
+        "Custom listing website",
+        "Virtual walkthroughs and floor plans"
       ]
     },
     {
       number: 3,
       title: "Promotion",
-      subtitle: "Maximum Exposure & Skillful Negotiation",
-      description: "I personally reach out to every agent who shows your home for feedback. My approach? Calm on the surface, paddling like crazy underneath. I leverage multiple offers to maximize your sale price—up to 23 offers on a single property through strategic marketing and personal networking.",
+      subtitle: "Maximum Exposure & Negotiation",
+      description: "MLS listing, targeted digital campaigns, and personal follow-up with every showing. I negotiate strategically to maximize your sale price.",
       icon: TrendingUp,
       highlights: [
-        "MLS + targeted digital ads (Facebook, Instagram, Google)",
-        "Personal outreach to every showing agent",
-        "Strategic negotiation leveraging multiple offers"
+        "MLS and widespread online exposure",
+        "Targeted social media campaigns",
+        "Expert negotiation tactics"
       ]
     },
   ];

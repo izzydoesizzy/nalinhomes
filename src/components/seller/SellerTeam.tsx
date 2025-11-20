@@ -1,43 +1,43 @@
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
-import { Camera, Home, Scale, DollarSign } from "lucide-react";
+import { Camera, Home, Scale, DollarSign, Hammer, Truck } from "lucide-react";
 
 export const SellerTeam = () => {
   const team = [
     {
       role: "Professional Photographer",
       description:
-        "Over 1,000 homes photographed with 7+ years of experience. Takes up to 4 hours per shoot ($500) vs. competitors' 40 minutes ($150)—the difference is night and day.",
+        "Captures the perfect angles and lighting with 1,000+ homes photographed. Creates stunning visuals that make buyers fall in love online.",
       icon: Camera,
-      initials: "PH",
     },
     {
       role: "Home Staging Expert",
       description:
-        "Transforms homes with strategic design that helps buyers emotionally connect. 300+ properties staged with incredible attention to detail and style.",
+        "Transforms spaces with strategic design that helps buyers emotionally connect. 300+ properties staged to perfection.",
       icon: Home,
-      initials: "HS",
     },
     {
       role: "Real Estate Lawyer",
       description:
-        "Provides clear guidance through contracts, title transfers, and closing to protect your interests every step of the way.",
+        "Provides clear guidance through contracts and closing. Protects your interests and ensures smooth legal transitions.",
       icon: Scale,
-      initials: "LA",
     },
     {
       role: "Mortgage Specialist",
       description:
-        "Helps buyers secure optimal financing, making your property more accessible to qualified purchasers and facilitating smooth closings.",
+        "Secures optimal financing for buyers. Makes your property more accessible to qualified purchasers for faster closings.",
       icon: DollarSign,
-      initials: "MS",
     },
     {
-      role: "Trusted Tradespeople",
+      role: "Trusted Contractors",
       description:
-        "Family-run contractors and handypeople I've known for 20-30 years. They treat your home with respect and deliver quality work on time.",
-      icon: Home,
-      initials: "TR",
+        "Family-run tradespeople with 20-30 years of relationships. They treat your home with respect and deliver quality work on time.",
+      icon: Hammer,
+    },
+    {
+      role: "Moving & Logistics",
+      description:
+        "Coordinates seamless transitions from junk removal to donation services. Makes moving stress-free with reliable professionals.",
+      icon: Truck,
     },
   ];
 
@@ -59,35 +59,28 @@ export const SellerTeam = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {team.map((member, index) => {
               const colors = [
-                { gradient: 'from-blue-500 to-cyan-500', bg: 'bg-blue-50 dark:bg-blue-950/30' },
-                { gradient: 'from-emerald-500 to-teal-500', bg: 'bg-emerald-50 dark:bg-emerald-950/30' },
-                { gradient: 'from-violet-500 to-purple-500', bg: 'bg-violet-50 dark:bg-violet-950/30' },
-                { gradient: 'from-amber-500 to-orange-500', bg: 'bg-amber-50 dark:bg-amber-950/30' },
-                { gradient: 'from-rose-500 to-pink-500', bg: 'bg-rose-50 dark:bg-rose-950/30' },
+                { gradient: 'from-blue-500 to-cyan-500', iconBg: 'bg-blue-100 dark:bg-blue-900/40' },
+                { gradient: 'from-emerald-500 to-teal-500', iconBg: 'bg-emerald-100 dark:bg-emerald-900/40' },
+                { gradient: 'from-violet-500 to-purple-500', iconBg: 'bg-violet-100 dark:bg-violet-900/40' },
+                { gradient: 'from-amber-500 to-orange-500', iconBg: 'bg-amber-100 dark:bg-amber-900/40' },
+                { gradient: 'from-rose-500 to-pink-500', iconBg: 'bg-rose-100 dark:bg-rose-900/40' },
+                { gradient: 'from-indigo-500 to-blue-500', iconBg: 'bg-indigo-100 dark:bg-indigo-900/40' },
               ];
               const color = colors[index % colors.length];
               
               return (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-700 bg-white dark:bg-slate-900">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="relative">
-                        <div className={`absolute inset-0 bg-gradient-to-br ${color.gradient} opacity-20 rounded-full blur-xl`}></div>
-                        <Avatar className="h-24 w-24 border-2 border-accent/20 relative z-10">
-                          <AvatarFallback className={`${color.bg} text-accent text-xl font-bold`}>
-                            {member.initials}
-                          </AvatarFallback>
-                        </Avatar>
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-700 bg-white dark:bg-slate-900 relative overflow-hidden">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${color.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
+                  <CardContent className="p-6 relative z-10">
+                    <div className="flex flex-col items-center text-center">
+                      <div className={`w-20 h-20 rounded-2xl ${color.iconBg} flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110`}>
+                        <div className={`absolute inset-0 bg-gradient-to-br ${color.gradient} opacity-10 rounded-2xl`}></div>
+                        <member.icon className="h-10 w-10 text-accent relative z-10" />
                       </div>
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <member.icon className="h-5 w-5 text-accent" />
-                          <h3 className="text-xl font-bold text-foreground">{member.role}</h3>
-                        </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {member.description}
-                        </p>
-                      </div>
+                      <h3 className="text-xl font-bold text-foreground mb-3">{member.role}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {member.description}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>

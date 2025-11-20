@@ -6,32 +6,32 @@ export const StressTransformation = () => {
     {
       stress: "Overwhelmed by To-Do Lists",
       transformation: "Done-For-You Service",
-      description: "I coordinate everything—staging, cleaning, repairs—so you can focus on your next chapter.",
-      testimonial: "Nalin handled absolutely everything. I didn't lift a finger.",
+      description: "I coordinate everything—staging, repairs, photography, marketing. You focus on your next chapter while I handle the details.",
+      testimonial: "He took care of everything. I didn't have to lift a finger.",
       icon: ClipboardList,
       colors: { gradient: 'from-rose-500 to-pink-600', icon: 'text-rose-400' }
     },
     {
       stress: "Worried About Not Getting Top Dollar",
       transformation: "Strategic Pricing & Negotiation",
-      description: "I leverage market analysis and multiple offers to maximize your sale price. My calm negotiation style gets results.",
-      testimonial: "We sold for 177% of asking—way beyond our expectations.",
+      description: "Calm on the surface, fierce underneath. I research every buyer and leverage multiple offers to maximize your sale price.",
+      testimonial: "He's too nice to be good at negotiating... until you see the results.",
       icon: DollarSign,
       colors: { gradient: 'from-emerald-500 to-teal-600', icon: 'text-emerald-400' }
     },
     {
       stress: "Unsure Who to Trust",
       transformation: "An Ecosystem of Good Humans",
-      description: "10+ years of trusted professionals—no kickbacks, just experts who treat you with respect.",
-      testimonial: "His team was incredible. Every single person was top-notch.",
+      description: "I've built relationships with the best professionals over 20+ years. No kickbacks—just trusted experts who treat you like family.",
+      testimonial: "It's a true ecosystem of good humans who all genuinely care.",
       icon: Users,
       colors: { gradient: 'from-blue-500 to-cyan-600', icon: 'text-blue-400' }
     },
     {
       stress: "Feeling Alone in the Process",
       transformation: "Constant Communication & Support",
-      description: "You'll get updates constantly. I personally call every agent for feedback and keep you informed every step.",
-      testimonial: "He checked in daily. I always knew exactly what was happening.",
+      description: "I personally reach out to every agent who shows your home. You'll always know what's happening—no surprises or radio silence.",
+      testimonial: "He kept us informed every step of the way. We never felt in the dark.",
       icon: MessageCircle,
       colors: { gradient: 'from-violet-500 to-purple-600', icon: 'text-violet-400' }
     }
