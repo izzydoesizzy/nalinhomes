@@ -26,9 +26,9 @@ export const SellerCTA = () => {
 
   const benefits = [
     "I cover upfront costs (staging, photography, cleaning)",
-    "Done-for-you service - I coordinate everything",
+    "Done-for-you service. I coordinate everything",
     "Personal outreach to every showing agent for feedback",
-    "Calm, consultative approach - never pushy",
+    "Calm, consultative approach. Never pushy",
     "99% word of mouth, 3 generations of client relationships",
   ];
 

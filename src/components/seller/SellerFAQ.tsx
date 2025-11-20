@@ -10,22 +10,22 @@ export const SellerFAQ = () => {
     {
       question: "Who pays for staging, cleaning, and photography?",
       answer:
-        "I do. I cover all upfront costs - staging, cleaning, professional photos - because I believe in investing in your success. My philosophy is simple: doing it right benefits us both. (And I never take kickbacks from vendors - I choose them because they're the best, period.)",
+        "I do. I cover all upfront costs: staging, cleaning, professional photos. My philosophy is simple: doing it right benefits us both. (And I never take kickbacks from vendors. I choose them because they're the best, period.)",
     },
     {
       question: "How long does it take to sell my home?",
       answer:
-        "Preparation can be as quick as 2 weeks if we're in a rush - I've turned homes around in 14 days when needed. Typically, plan on 2-3 weeks to get everything prepared and photographed to perfection. Once we hit the market, many of my listings attract offers within 7-10 days.",
+        "Preparation can be as quick as 2 weeks if we're in a rush. I've turned homes around in 14 days when needed. Typically, plan on 2-3 weeks to get everything prepared and photographed to perfection. Once we hit the market, many of my listings attract offers within 7-10 days.",
     },
     {
       question: "My home needs a lot of work... do I have to do all that before selling?",
       answer:
-        "Not on your own! I'll coordinate trusted professionals to handle it. Often, a fresh coat of paint and decluttering work wonders. You don't need to manage a thing - I handle the heavy lifting. And if there are major issues we decide not to fix, I'll strategize how to price and position your home accordingly.",
+        "Not on your own! I'll coordinate trusted professionals to handle it. Often, a fresh coat of paint and decluttering work wonders. You don't need to manage a thing. I handle the heavy lifting. And if there are major issues we decide not to fix, I'll strategize how to price and position your home accordingly.",
     },
     {
       question: "Do you take kickbacks from your team members?",
       answer:
-        "Never. I have a fiduciary duty to put your interests first. I choose my photographer, stager, and other professionals because they're the absolute best at what they do - not because they pay me. This is about getting you the best result, period.",
+        "Never. I have a fiduciary duty to put your interests first. I choose my photographer, stager, and other professionals because they're the absolute best at what they do, not because they pay me. This is about getting you the best result, period.",
     },
     {
       question: "How do you handle multiple offers?",
@@ -35,7 +35,7 @@ export const SellerFAQ = () => {
     {
       question: "What if my home is already in great shape?",
       answer:
-        "If your home is already picture-perfect, that's fantastic - we'll save time and you'll reap the rewards. I never push unnecessary changes. We'll still do high-quality photos and marketing, of course, but we won't fix what isn't broken. I'm not here to spend money just for the sake of it - I'm here to add value.",
+        "If your home is already picture-perfect, that's fantastic. We'll save time and you'll reap the rewards. I never push unnecessary changes. We'll still do high-quality photos and marketing, of course, but we won't fix what isn't broken. I'm not here to spend money just for the sake of it. I'm here to add value.",
     },
   ];
 

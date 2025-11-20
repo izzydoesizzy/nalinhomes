@@ -7,7 +7,7 @@ export const SellingProcess = () => {
       number: 1,
       title: "Preparation",
       subtitle: "Getting Your Home Show-Ready",
-      description: "I visit your home and recommend what will help it shine. Whether staging, painting, or decluttering, I coordinate everything - you don't lift a finger.",
+      description: "I visit your home and recommend what will help it shine. Whether it's staging, painting, or decluttering, I coordinate everything. You don't lift a finger.",
       icon: Home,
       highlights: [
         "Professional staging and design",
@@ -52,7 +52,7 @@ export const SellingProcess = () => {
               My 3-Step Selling Process
             </h3>
             <p className="text-lg text-muted-foreground mb-12 text-center max-w-3xl mx-auto">
-              Preparation → Production → Promotion. A proven framework that maximizes your sale price while minimizing your stress.
+              Preparation. Production. Promotion. A proven framework that maximizes your sale price while minimizing your stress.
             </p>
             
             <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
