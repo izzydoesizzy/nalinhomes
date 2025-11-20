@@ -7,7 +7,7 @@ export const SellingProcess = () => {
       number: 1,
       title: "Preparation",
       subtitle: "Getting Your Home Show-Ready",
-      description: "I visit your home and recommend what will help it shine. Whether staging, painting, or decluttering, I coordinate everything—you don't lift a finger.",
+      description: "I visit your home and recommend what will help it shine. Whether staging, painting, or decluttering, I coordinate everything - you don't lift a finger.",
       icon: Home,
       highlights: [
         "Professional staging and design",

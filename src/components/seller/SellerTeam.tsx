@@ -52,7 +52,7 @@ export const SellerTeam = () => {
               The All-Star Team Behind Your Sale
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              I've assembled an "ecosystem of good humans," as one client called it. These aren't just vendors—they're experts I trust to treat you and your home with the same respect I do. <strong className="text-foreground">No kickbacks.</strong> I choose them because they're the best, period.
+              I've assembled an "ecosystem of good humans," as one client called it. These aren't just vendors - they're experts I trust to treat you and your home with the same respect I do. <strong className="text-foreground">No kickbacks.</strong> I choose them because they're the best, period.
             </p>
           </div>
 
