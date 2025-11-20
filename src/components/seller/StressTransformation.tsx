@@ -6,7 +6,7 @@ export const StressTransformation = () => {
     {
       stress: "Overwhelmed by To-Do Lists",
       transformation: "Done-For-You Service",
-      description: "I coordinate everything—staging, repairs, photography, marketing. You focus on your next chapter while I handle the details.",
+      description: "I coordinate everything - staging, repairs, photography, marketing. You focus on your next chapter while I handle the details.",
       testimonial: "He took care of everything. I didn't have to lift a finger.",
       icon: ClipboardList,
       colors: { gradient: 'from-rose-500 to-pink-600', icon: 'text-rose-400' }
@@ -22,7 +22,7 @@ export const StressTransformation = () => {
     {
       stress: "Unsure Who to Trust",
       transformation: "An Ecosystem of Good Humans",
-      description: "I've built relationships with the best professionals over 20+ years. No kickbacks—just trusted experts who treat you like family.",
+      description: "I've built relationships with the best professionals over 20+ years. No kickbacks - just trusted experts who treat you like family.",
       testimonial: "It's a true ecosystem of good humans who all genuinely care.",
       icon: Users,
       colors: { gradient: 'from-blue-500 to-cyan-600', icon: 'text-blue-400' }
@@ -30,7 +30,7 @@ export const StressTransformation = () => {
     {
       stress: "Feeling Alone in the Process",
       transformation: "Constant Communication & Support",
-      description: "I personally reach out to every agent who shows your home. You'll always know what's happening—no surprises or radio silence.",
+      description: "I personally reach out to every agent who shows your home. You'll always know what's happening - no surprises or radio silence.",
       testimonial: "He kept us informed every step of the way. We never felt in the dark.",
       icon: MessageCircle,
       colors: { gradient: 'from-violet-500 to-purple-600', icon: 'text-violet-400' }
