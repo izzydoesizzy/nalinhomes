@@ -11,12 +11,12 @@ export const WhySellersChooseMe = () => {
     {
       icon: DollarSign,
       title: "I Pay Upfront",
-      description: "Staging, photography, cleaning - I invest in maximizing your sale. It's my commitment to doing things right from the start.",
+      description: "Staging, photography, cleaning. I invest in maximizing your sale. It's my commitment to doing things right from the start.",
     },
     {
       icon: MessageCircle,
       title: "Constant Communication",
-      description: "I personally reach out to every agent who shows your home. You'll always know what's happening - no surprises or radio silence.",
+      description: "I personally reach out to every agent who shows your home. You'll always know what's happening. No surprises or radio silence.",
     },
     {
       icon: Heart,

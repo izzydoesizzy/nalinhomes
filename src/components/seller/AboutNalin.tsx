@@ -33,16 +33,16 @@ export const AboutNalin = () => {
                   Selling your home doesn't have to be overwhelming.
                 </p>
                 <p>
-                  My approach is warm, hands-on, and truly done-for-you. I take care of every detail - from preparation and staging to marketing and negotiations - so you can focus on your next chapter.
+                  My approach is warm, hands-on, and truly done-for-you. I take care of every detail, from preparation and staging to marketing and negotiations, so you can focus on your next chapter.
                 </p>
                 <p>
-                  I've spent 10+ years assembling an "ecosystem of good humans" - trusted stagers, photographers, cleaners, and contractors who treat you and your home with respect. <strong className="text-foreground">I cover the upfront costs</strong> because I believe in investing in your success.
+                  I've spent 10+ years assembling an "ecosystem of good humans": trusted stagers, photographers, cleaners, and contractors who treat you and your home with respect. <strong className="text-foreground">I cover the upfront costs</strong> because I believe in investing in your success.
                 </p>
                 
                 {/* Family Legacy */}
                 <div className="bg-accent/5 border-l-4 border-accent pl-4 py-3 rounded">
                   <p className="text-foreground italic">
-                    Still a family business at heart - my father's been in real estate since 1973. 50 years of combined experience serving Toronto families.
+                    Still a family business at heart. My father's been in real estate since 1973. That's 50 years of combined experience serving Toronto families.
                   </p>
                 </div>
               </div>
