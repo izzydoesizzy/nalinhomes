@@ -57,13 +57,13 @@ export const StressTransformation = () => {
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 border border-slate-700 hover:border-slate-600 bg-slate-800/50 backdrop-blur-sm relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-700/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <CardContent className="p-8 relative z-10">
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0">
+                  <div className="flex flex-col md:flex-row items-start gap-6">
+                    <div className="flex-shrink-0 mx-auto md:mx-0">
                       <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${item.colors.gradient} flex items-center justify-center transition-transform duration-300 group-hover:scale-105`}>
                         <item.icon className="w-8 h-8 text-white" />
                       </div>
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 text-center md:text-left">
                       <div className="mb-3">
                         <p className="text-slate-400 line-through text-sm mb-1">{item.stress}</p>
                         <h3 className="text-2xl font-bold text-white">{item.transformation}</h3>
