@@ -42,7 +42,7 @@ export const StressTransformation = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(71,85,105,0.4),transparent_60%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(30,41,59,0.5),transparent_60%)]"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-[80%] mx-auto">
+        <div className="w-full lg:max-w-[80%] mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Selling Is Stressful. It Doesn't Have to Be.

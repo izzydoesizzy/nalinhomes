@@ -46,7 +46,7 @@ export const SellingProcess = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(30,64,175,0.15),transparent_60%)]"></div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(15,118,110,0.12),transparent_60%)]"></div>
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-[80%] mx-auto space-y-16">
+        <div className="w-full lg:max-w-[80%] mx-auto space-y-16">
           <div>
             <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-800 via-blue-600 to-teal-700 dark:from-blue-400 dark:via-blue-500 dark:to-teal-400 bg-clip-text text-transparent mb-4 text-center">
               My 3-Step Selling Process

@@ -47,7 +47,7 @@ export const SellerCTA = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-[80%] mx-auto">
+        <div className="w-full lg:max-w-[80%] mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Benefits */}
             <div className="text-white">
