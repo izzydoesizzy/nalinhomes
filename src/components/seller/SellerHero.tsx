@@ -27,10 +27,10 @@ export const SellerHero = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4 animate-fade-in leading-tight">
-              Selling with Heart, Strategy, and a Lot Less Hassle
+              Selling with Heart, Strategy,<br />and a Lot Less Hassle
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/90 mb-6 animate-fade-in max-w-3xl mx-auto">
-              "Selling a home is personal. I bring 10+ years of experience, an all-star team of good humans, and a done-for-you process so you can feel confident every step of the way."
+              Selling a home is personal. With 10+ years of experience, an all-star team of good humans, and a done-for-you process, I'll help you feel confident every step of the way.
             </p>
             <Button 
               size="lg" 
