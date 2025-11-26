@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -6,8 +7,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import {
+  Dialog,
+  DialogContent,
+} from "@/components/ui/dialog";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const PropertyShowcase = () => {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const images = [
     "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop", // Modern home exterior
     "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&h=600&fit=crop", // Luxury living room
@@ -47,7 +55,8 @@ export const PropertyShowcase = () => {
                         <img
                           src={image}
                           alt={`Professional property photography example ${index + 1}`}
-                          className="w-full h-80 object-cover rounded-lg"
+                          className="w-full h-80 object-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity"
+                          onClick={() => setLightboxIndex(index)}
                         />
                       </div>
                     </CarouselItem>
@@ -60,6 +69,46 @@ export const PropertyShowcase = () => {
           </Card>
         </div>
       </div>
+
+      <Dialog open={lightboxIndex !== null} onOpenChange={() => setLightboxIndex(null)}>
+        <DialogContent className="max-w-[95vw] max-h-[95vh] p-0 bg-black/95 border-slate-700">
+          {lightboxIndex !== null && (
+            <div className="relative w-full h-full flex items-center justify-center">
+              <img
+                src={images[lightboxIndex]}
+                alt={`Property photo ${lightboxIndex + 1}`}
+                className="max-w-full max-h-[90vh] object-contain"
+              />
+              
+              {lightboxIndex > 0 && (
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-slate-800/90 border-slate-600 text-white hover:bg-slate-700"
+                  onClick={() => setLightboxIndex(lightboxIndex - 1)}
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </Button>
+              )}
+              
+              {lightboxIndex < images.length - 1 && (
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-slate-800/90 border-slate-600 text-white hover:bg-slate-700"
+                  onClick={() => setLightboxIndex(lightboxIndex + 1)}
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </Button>
+              )}
+              
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-sm bg-slate-800/80 px-3 py-1 rounded-full">
+                {lightboxIndex + 1} / {images.length}
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
