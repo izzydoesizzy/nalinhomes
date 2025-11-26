@@ -1,24 +1,18 @@
 import { DollarSign, Users, Heart, TrendingUp } from "lucide-react";
 import nalinPhoto from "@/assets/nalin-photo.png";
-
 export const AboutNalin = () => {
-  return (
-    <section id="about" className="py-20 bg-background">
+  return <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="w-full lg:max-w-[80%] mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Photo Section */}
             <div className="relative">
               <div className="aspect-square max-w-md mx-auto rounded-xl overflow-hidden shadow-lg">
-                <img
-                  src={nalinPhoto}
-                  alt="Nalin Sharma - Toronto Real Estate Broker"
-                  className="w-full h-full object-cover"
-                />
+                <img src={nalinPhoto} alt="Nalin Sharma - Toronto Real Estate Broker" className="w-full h-full object-cover" />
               </div>
               <div className="text-center mt-6">
                 <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full font-semibold">
-                  <span>✓</span> Licensed Real Estate Broker
+                  <span>✓</span> Licensed Real Estate Salesperson  
                 </div>
               </div>
             </div>
@@ -40,48 +34,14 @@ export const AboutNalin = () => {
                 </p>
                 
                 {/* Family Legacy */}
-                <div className="bg-accent/5 border-l-4 border-accent pl-4 py-3 rounded">
-                  <p className="text-foreground italic">
-                    Still a family business at heart. My father's been in real estate since 1973. That's 50 years of combined experience serving Toronto families.
-                  </p>
-                </div>
+                
               </div>
 
               {/* Key Stats Badges */}
-              <div className="flex flex-wrap gap-3 pt-6">
-                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 hover:border-accent transition-colors">
-                  <Users className="h-5 w-5 text-accent" />
-                  <div>
-                    <span className="font-bold text-foreground">99%</span>
-                    <span className="text-xs text-muted-foreground ml-1">Word of Mouth</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 hover:border-accent transition-colors">
-                  <Heart className="h-5 w-5 text-accent" />
-                  <div>
-                    <span className="font-bold text-foreground">3 Generations</span>
-                    <span className="text-xs text-muted-foreground ml-1">Client Relationships</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 hover:border-accent transition-colors">
-                  <DollarSign className="h-5 w-5 text-accent" />
-                  <div>
-                    <span className="font-bold text-foreground">I Pay</span>
-                    <span className="text-xs text-muted-foreground ml-1">Upfront Costs</span>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 bg-card border border-border rounded-full px-4 py-2 hover:border-accent transition-colors">
-                  <TrendingUp className="h-5 w-5 text-accent" />
-                  <div>
-                    <span className="font-bold text-foreground">177%</span>
-                    <span className="text-xs text-muted-foreground ml-1">Record Sale</span>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
