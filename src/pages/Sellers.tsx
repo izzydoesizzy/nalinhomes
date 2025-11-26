@@ -11,10 +11,8 @@ import { SellerTestimonials } from "@/components/seller/SellerTestimonials";
 import { SellerFAQ } from "@/components/seller/SellerFAQ";
 import { SellerCTA } from "@/components/seller/SellerCTA";
 import { Footer } from "@/components/Footer";
-
 const Sellers = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       <SellerHero />
       <AboutNalin />
@@ -23,13 +21,11 @@ const Sellers = () => {
       <PropertyShowcase />
       <SellerTeam />
       <WhySellersChooseMe />
-      <CaseStudies />
+      
       <SellerTestimonials />
       <SellerFAQ />
       <SellerCTA />
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Sellers;
