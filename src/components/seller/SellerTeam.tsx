@@ -52,40 +52,26 @@ export const SellerTeam = () => {
               The All-Star Team Behind Your Sale
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              I've assembled an "ecosystem of good humans," as one client called it. These aren't just vendors. They're experts I trust to treat you and your home with the same respect I do. <strong className="text-foreground">No kickbacks.</strong> I choose them because they're the best, period.
+              I've assembled an "ecosystem of good humans," as one client called it. These aren't just vendors. They're experts I trust to treat you and your home with the same respect I do. I choose them because they're the best, period.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {team.map((member, index) => {
-              const colors = [
-                { gradient: 'from-blue-500 to-cyan-500', iconBg: 'bg-blue-100 dark:bg-blue-900/40' },
-                { gradient: 'from-emerald-500 to-teal-500', iconBg: 'bg-emerald-100 dark:bg-emerald-900/40' },
-                { gradient: 'from-violet-500 to-purple-500', iconBg: 'bg-violet-100 dark:bg-violet-900/40' },
-                { gradient: 'from-amber-500 to-orange-500', iconBg: 'bg-amber-100 dark:bg-amber-900/40' },
-                { gradient: 'from-rose-500 to-pink-500', iconBg: 'bg-rose-100 dark:bg-rose-900/40' },
-                { gradient: 'from-indigo-500 to-blue-500', iconBg: 'bg-indigo-100 dark:bg-indigo-900/40' },
-              ];
-              const color = colors[index % colors.length];
-              
-              return (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-700 bg-white dark:bg-slate-900 relative overflow-hidden">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${color.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                  <CardContent className="p-6 relative z-10">
-                    <div className="flex flex-col items-center text-center">
-                      <div className={`w-20 h-20 rounded-2xl ${color.iconBg} flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110`}>
-                        <div className={`absolute inset-0 bg-gradient-to-br ${color.gradient} opacity-10 rounded-2xl`}></div>
-                        <member.icon className="h-10 w-10 text-accent relative z-10" />
-                      </div>
-                      <h3 className="text-xl font-bold text-foreground mb-3">{member.role}</h3>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {member.description}
-                      </p>
+            {team.map((member, index) => (
+              <Card key={index} className="bg-card border-border shadow-sm">
+                <CardContent className="p-6">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-20 h-20 rounded-2xl bg-muted flex items-center justify-center mb-4">
+                      <member.icon className="h-10 w-10 text-accent" />
                     </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                    <h3 className="text-xl font-bold text-foreground mb-3">{member.role}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {member.description}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
