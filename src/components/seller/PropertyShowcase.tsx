@@ -17,24 +17,6 @@ export const PropertyShowcase = () => {
         "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=600&fit=crop",
       ],
       description: "Sophisticated corner unit with floor-to-ceiling windows and premium finishes"
-    },
-    {
-      address: "Modern Family Home",
-      images: [
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&h=600&fit=crop",
-      ],
-      description: "Beautifully renovated 4-bedroom home with private backyard oasis"
-    },
-    {
-      address: "Executive Townhouse",
-      images: [
-        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop",
-      ],
-      description: "Stunning 3-level townhome with designer finishes and rooftop terrace"
     }
   ];
 
