@@ -6,7 +6,7 @@ export const ProcessPhilosophy = () => {
     {
       number: 1,
       title: "Discovery",
-      description: "We discuss your goals, budget, timeline, and dream home criteria in detail.",
+      description: "We discuss your goals, budget, timeline, and home criteria in detail.",
       icon: Search,
     },
     {
