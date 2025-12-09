@@ -1,16 +1,22 @@
 import nalinPhoto from "@/assets/nalin-photo.png";
+
 export const About = () => {
-  return <section id="about" className="py-20 bg-background">
+  return (
+    <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Photo Section */}
           <div className="relative">
             <div className="aspect-square max-w-md mx-auto rounded-xl overflow-hidden shadow-lg">
-              <img src={nalinPhoto} alt="Nalin Sharma - Toronto Real Estate Broker" className="w-full h-full object-cover" />
+              <img
+                src={nalinPhoto}
+                alt="Nalin Sharma - Toronto Real Estate Broker"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="text-center mt-6">
-              <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full font-semibold">✓
-Licensed Real Estate Salesperson<span>✓</span> Licensed Real Estate Broker
+              <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full font-semibold">
+                <span>✓</span> Licensed Real Estate Broker
               </div>
             </div>
           </div>
@@ -34,5 +40,6 @@ Licensed Real Estate Salesperson<span>✓</span> Licensed Real Estate Broker
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
