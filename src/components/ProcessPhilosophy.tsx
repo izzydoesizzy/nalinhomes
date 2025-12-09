@@ -30,7 +30,7 @@ export const ProcessPhilosophy = () => {
     {
       number: 5,
       title: "Negotiation",
-      description: "I advocate for your best interests to secure favorable terms and pricing.",
+      description: "I advocate for your best interests to secure the property for the best price possible.",
       icon: Handshake,
     },
     {
