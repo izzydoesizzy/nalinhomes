@@ -95,6 +95,11 @@ export const Hero = () => {
               value: "Over 90%",
               label: "Referral-based Business",
               subtitle: "Happy clients bring business"
+            }, {
+              icon: Clock,
+              value: "2–3 Months",
+              label: "Avg to Get the Keys",
+              subtitle: "Focused, efficient, and stress-free"
             }].map((stat, index) => {
               const Icon = stat.icon;
               return <div key={index} className="text-center group hover:scale-105 transition-transform duration-300">
