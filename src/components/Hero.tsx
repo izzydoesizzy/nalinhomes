@@ -83,23 +83,18 @@ export const Hero = () => {
               {[{
               icon: Home,
               value: "160+",
-              label: "Homes Purchased",
+              label: "Successful Transactions",
               subtitle: "Trusted across Toronto"
             }, {
               icon: Star,
               value: "60+",
               label: "5-Star Reviews",
-              subtitle: "Real stories from real buyers"
+              subtitle: "Real stories from happy clients"
             }, {
               icon: Target,
-              value: "80%",
-              label: "First-Offer Success Rate",
-              subtitle: "A strategy that wins in any market"
-            }, {
-              icon: Clock,
-              value: "2–3 Months",
-              label: "Avg to Get the Keys",
-              subtitle: "Focused, efficient, and stress-free"
+              value: "Over 90%",
+              label: "Referral-based Business",
+              subtitle: "Happy clients bring business"
             }].map((stat, index) => {
               const Icon = stat.icon;
               return <div key={index} className="text-center group hover:scale-105 transition-transform duration-300">
