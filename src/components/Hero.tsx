@@ -3,23 +3,15 @@ import { ArrowRight, Play, Star, Home, Target, Clock } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import videoThumbnail from "@/assets/video-thumbnail.png";
 import { useState, useEffect } from "react";
-
 export const Hero = () => {
   const [currentAvatar, setCurrentAvatar] = useState(0);
-  
-  const avatars = [
-    "First-time home-buyers in Toronto",
-    "Young families growing in the GTA"
-  ];
-
+  const avatars = ["First-time home-buyers in Toronto", "Young families growing in the GTA"];
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentAvatar((prev) => (prev + 1) % avatars.length);
+      setCurrentAvatar(prev => (prev + 1) % avatars.length);
     }, 3000);
-    
     return () => clearInterval(interval);
   }, []);
-
   const testimonials = [{
     quote: "After a handful of showings, he crafted a master offer which was accepted and closed all within 30 days.",
     author: "Jermaine Bain",
@@ -65,9 +57,7 @@ export const Hero = () => {
               <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4 animate-fade-in leading-tight">
                 Thinking of Buying Your First Home in Toronto?
               </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/90 mb-6 animate-fade-in">
-                Skip the stress, uncertainty, and overwhelm. Let me guide you through every step with clarity, confidence, and care.
-              </p>
+              <p className="text-lg md:text-xl text-primary-foreground/90 mb-6 animate-fade-in">Skip the stress, uncertainty, and overwhelm. Let me guide you through every step with clarity and confidence.</p>
               <Button size="lg" onClick={scrollToContact} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-accent transition-all hover:scale-105">
                 Book Your Discovery Call
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -90,38 +80,29 @@ export const Hero = () => {
           {/* Authority Bar */}
           <div className="rounded-xl p-6 mb-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-              {[
-                {
-                  icon: Home,
-                  value: "150+",
-                  label: "Homes Purchased",
-                  subtitle: "Trusted across Toronto",
-                },
-                {
-                  icon: Star,
-                  value: "60+",
-                  label: "5-Star Reviews",
-                  subtitle: "Real stories from real buyers",
-                },
-                {
-                  icon: Target,
-                  value: "80%",
-                  label: "First-Offer Success Rate",
-                  subtitle: "A strategy that wins in any market",
-                },
-                {
-                  icon: Clock,
-                  value: "2–3 Months",
-                  label: "Avg to Get the Keys",
-                  subtitle: "Focused, efficient, and stress-free",
-                },
-              ].map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <div
-                    key={index}
-                    className="text-center group hover:scale-105 transition-transform duration-300"
-                  >
+              {[{
+              icon: Home,
+              value: "150+",
+              label: "Homes Purchased",
+              subtitle: "Trusted across Toronto"
+            }, {
+              icon: Star,
+              value: "60+",
+              label: "5-Star Reviews",
+              subtitle: "Real stories from real buyers"
+            }, {
+              icon: Target,
+              value: "80%",
+              label: "First-Offer Success Rate",
+              subtitle: "A strategy that wins in any market"
+            }, {
+              icon: Clock,
+              value: "2–3 Months",
+              label: "Avg to Get the Keys",
+              subtitle: "Focused, efficient, and stress-free"
+            }].map((stat, index) => {
+              const Icon = stat.icon;
+              return <div key={index} className="text-center group hover:scale-105 transition-transform duration-300">
                     <div className="flex flex-col items-center gap-2">
                       <Icon className="w-8 h-8 text-accent mb-1 group-hover:text-accent/80 transition-colors" />
                       <div className="text-2xl md:text-3xl font-bold text-primary-foreground">
@@ -134,9 +115,8 @@ export const Hero = () => {
                         {stat.subtitle}
                       </div>
                     </div>
-                  </div>
-                );
-              })}
+                  </div>;
+            })}
             </div>
           </div>
 
