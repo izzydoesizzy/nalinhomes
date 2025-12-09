@@ -82,7 +82,7 @@ export const Hero = () => {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               {[{
               icon: Home,
-              value: "150+",
+              value: "160+",
               label: "Homes Purchased",
               subtitle: "Trusted across Toronto"
             }, {
