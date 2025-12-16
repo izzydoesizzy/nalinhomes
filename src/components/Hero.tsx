@@ -5,6 +5,7 @@ import videoThumbnail from "@/assets/video-thumbnail.png";
 import { useState, useEffect } from "react";
 export const Hero = () => {
   const [currentAvatar, setCurrentAvatar] = useState(0);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const avatars = ["First-time home-buyers in Toronto", "Young families growing in the GTA"];
   useEffect(() => {
     const interval = setInterval(() => {
@@ -67,12 +68,28 @@ export const Hero = () => {
             {/* Video Section */}
             <div className="relative group animate-fade-in">
               <div className="aspect-video rounded-xl overflow-hidden shadow-lg relative">
-                <img src={videoThumbnail} alt="Nalin Sharma introduction video" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full w-20 h-20 p-0 group-hover:scale-110 transition-transform shadow-accent">
-                    <Play className="h-10 w-10 ml-1" fill="currentColor" />
-                  </Button>
-                </div>
+                {isVideoPlaying ? (
+                  <iframe
+                    src="https://player.vimeo.com/video/1147039242?autoplay=1"
+                    className="w-full h-full"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                    title="Nalin Sharma introduction video"
+                  />
+                ) : (
+                  <>
+                    <img src={videoThumbnail} alt="Nalin Sharma introduction video" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                      <Button 
+                        size="lg" 
+                        onClick={() => setIsVideoPlaying(true)}
+                        className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-full w-20 h-20 p-0 group-hover:scale-110 transition-transform shadow-accent"
+                      >
+                        <Play className="h-10 w-10 ml-1" fill="currentColor" />
+                      </Button>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
