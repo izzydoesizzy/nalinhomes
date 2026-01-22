@@ -31,7 +31,7 @@ export const About = () => {
                 For over a decade, I've been helping first-time homebuyers in Toronto turn their dreams into reality. I understand that buying your first home can feel overwhelming—there's so much to learn, so many decisions to make, and the stakes feel incredibly high.
               </p>
               <p>
-                That's exactly why I do what I do. My approach is simple: I remove the stress, eliminate the uncertainty, and guide you through every single step with transparency and care.
+                That's exactly why I do what I do. My approach is simple: I remove the stress, eliminate the uncertainty, and guide you through every single step with transparency and confidence.
               </p>
               <p className="text-foreground font-semibold pt-4">
                 With me, you're not just getting an agent—you're getting a dedicated partner who's genuinely invested in your success.
