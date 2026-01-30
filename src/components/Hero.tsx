@@ -64,7 +64,11 @@ export const Hero = () => {
                   Book a Discovery Call
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-lg px-8 py-6">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-semibold text-lg px-8 py-6"
+                >
                   Resources
                 </Button>
               </div>

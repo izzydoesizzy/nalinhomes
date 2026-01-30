@@ -90,7 +90,7 @@ export const Footer = () => {
             />
           </div>
           <p>© {new Date().getFullYear()} Nalin Sharma Real Estate. All rights reserved.</p>
-          <p className="mt-2">Licensed Real Estate Broker in Ontario</p>
+          <p className="mt-2">Licensed Real Estate Sales Representative</p>
         </div>
       </div>
     </footer>
