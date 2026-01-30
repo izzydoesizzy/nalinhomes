@@ -67,12 +67,12 @@ export const ProcessPhilosophy = () => {
                 const color = colors[index % colors.length];
                 
                 return (
-                  <div key={index} className="relative group">
-                    <Card className="h-full hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-700 relative z-10 bg-white dark:bg-slate-900 hover:-translate-y-1">
+                  <div key={index} className="relative">
+                    <Card className="h-full border border-slate-200 dark:border-slate-700 relative z-10 bg-white dark:bg-slate-900">
                       <CardContent className="p-6">
                         <div className="flex items-start gap-4">
                           <div className="flex-shrink-0">
-                            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-700 flex items-center justify-center">
                               <step.icon className={`w-6 h-6 ${color.icon}`} />
                             </div>
                           </div>

@@ -59,10 +59,15 @@ export const Hero = () => {
                 Thinking of Buying Your First Home in Toronto?
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/90 mb-6 animate-fade-in">Skip the stress, uncertainty, and overwhelm. Let me guide you through every step with clarity and confidence.</p>
-              <Button size="lg" onClick={scrollToContact} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-accent transition-all hover:scale-105">
-                Book Your Discovery Call
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" onClick={scrollToContact} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-accent transition-all hover:scale-105">
+                  Book a Discovery Call
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+                <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold text-lg px-8 py-6">
+                  Resources
+                </Button>
+              </div>
             </div>
 
             {/* Video Section */}

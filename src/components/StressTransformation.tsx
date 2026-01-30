@@ -17,7 +17,7 @@ export const StressTransformation = () => {
     stress: "Worried About Missing Red Flags",
     transformation: "Every Detail Scrutinized",
     description: "With Sherlock-level investigation, Nalin spots issues you'd never consider in order to protect your best interests.",
-    testimonial: "Never rushed, always helpful, and he pointed out red flags I wouldn't have noticed.",
+    testimonial: "With Sherlock-level investigation, Nalin spots issues you'd never consider in order to protect your best interests. Never rushed, always helpful, and he pointed out red flags I wouldn't have noticed.",
     author: "Massimo",
     color: {
       gradient: 'from-blue-500 to-cyan-600',
