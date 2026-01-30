@@ -51,7 +51,7 @@ export const ProcessPhilosophy = () => {
           <div>
             <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-800 via-blue-600 to-teal-700 dark:from-blue-400 dark:via-blue-500 dark:to-teal-400 bg-clip-text text-transparent mb-4 text-center">How I Work: The Buying Process</h3>
             <p className="text-lg text-muted-foreground mb-12 text-center max-w-3xl mx-auto">
-              I believe in education over pressure. Every step is explained clearly so you feel confident in every decision.
+              I believe in education and guidance. Every step is explained clearly so you feel confident in every decision.
             </p>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
