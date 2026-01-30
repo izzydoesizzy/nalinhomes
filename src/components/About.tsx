@@ -14,9 +14,12 @@ export const About = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="text-center mt-6">
+            <div className="text-center mt-6 flex flex-col gap-2 items-center">
               <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full font-semibold">
-                <span>✓</span> Licensed Real Estate Broker
+                <span>✓</span> Licensed Real Estate Salesperson
+              </div>
+              <div className="inline-flex items-center gap-2 bg-accent/10 text-accent px-4 py-2 rounded-full font-semibold">
+                <span>✓</span> Master Certified Negotiation Expert
               </div>
             </div>
           </div>

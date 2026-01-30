@@ -51,14 +51,14 @@ export const StressTransformation = () => {
         <div className="max-w-[80%] mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-foreground">Home Buying Is Stressful.</span>
+              <span className="text-foreground">Home Buying Can Be Stressful.</span>
               <br />
               <span className="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
-                It Doesn't Have to Be.
+                But It Doesn't Have to Be.
               </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Here's how Nalin transforms the most common home buying stresses into a smooth, supported journey.
+              Here's how Nalin transforms the most common home buying stresses into a smooth and supported journey.
             </p>
           </div>
 
