@@ -41,10 +41,10 @@ export const CTA = () => {
 
           <Button
             size="lg"
-            className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-xl px-12 py-8 shadow-accent transition-all hover:scale-105"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg md:text-xl px-6 md:px-12 py-6 md:py-8 shadow-accent transition-all hover:scale-105 w-full sm:w-auto max-w-full whitespace-normal text-center inline-flex flex-wrap items-center justify-center gap-2 leading-snug"
           >
             Book Your Free Discovery Call
-            <Calendar className="ml-3 h-6 w-6" />
+            <Calendar className="h-6 w-6" />
           </Button>
 
           <p className="text-primary-foreground/70 mt-6 text-sm">
