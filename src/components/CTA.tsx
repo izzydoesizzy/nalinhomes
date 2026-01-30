@@ -30,12 +30,12 @@ export const CTA = () => {
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 border border-primary-foreground/20">
               <Mail className="w-10 h-10 text-accent mx-auto mb-3" />
               <h3 className="font-semibold text-primary-foreground mb-2">Send an Email</h3>
-              <p className="text-sm text-primary-foreground/80">nalin@torontohomes.com</p>
+              <p className="text-sm text-primary-foreground/80">nalinksharma@gmail.com</p>
             </div>
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6 border border-primary-foreground/20">
               <Phone className="w-10 h-10 text-accent mx-auto mb-3" />
               <h3 className="font-semibold text-primary-foreground mb-2">Call Direct</h3>
-              <p className="text-sm text-primary-foreground/80">(416) 555-0123</p>
+              <p className="text-sm text-primary-foreground/80">+1 (416) 726-3274</p>
             </div>
           </div>
 
