@@ -13,10 +13,18 @@ export const Footer = () => {
               Your trusted partner in Toronto real estate, specializing in helping first-time homebuyers achieve their dreams.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-accent transition-colors">
+              <a
+                href="https://www.linkedin.com/in/nalinksharma/"
+                className="hover:text-accent transition-colors"
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-accent transition-colors">
+              <a
+                href="https://www.instagram.com/nalinksharma/"
+                className="hover:text-accent transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -30,14 +38,14 @@ export const Footer = () => {
                 <Phone className="w-5 h-5 mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-medium text-primary-foreground">Phone</p>
-                  <p>(416) 555-0123</p>
+                  <p>+1 (416) 726-3274</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-medium text-primary-foreground">Email</p>
-                  <p>nalin@torontohomes.com</p>
+                  <p>nalinksharma@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -65,13 +73,8 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-accent transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-accent transition-colors">
-                  Terms of Service
+                <a href="#resources" className="hover:text-accent transition-colors">
+                  Resources
                 </a>
               </li>
             </ul>
@@ -87,7 +90,7 @@ export const Footer = () => {
             />
           </div>
           <p>© {new Date().getFullYear()} Nalin Sharma Real Estate. All rights reserved.</p>
-          <p className="mt-2">Licensed Real Estate Broker in Ontario</p>
+          <p className="mt-2">Licensed Real Estate Sales Representative</p>
         </div>
       </div>
     </footer>
