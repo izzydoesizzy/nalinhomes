@@ -26,11 +26,6 @@ export const Hero = () => {
     author: "Chi Nguyen",
     location: "Toronto"
   }];
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth"
-    });
-  };
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
@@ -60,9 +55,19 @@ export const Hero = () => {
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/90 mb-6 animate-fade-in">Skip the stress, uncertainty, and overwhelm. Let me guide you through every step with clarity and confidence.</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" onClick={scrollToContact} className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-accent transition-all hover:scale-105">
-                  Book a Discovery Call
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Button
+                  size="lg"
+                  asChild
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6 shadow-accent transition-all hover:scale-105"
+                >
+                  <a
+                    href="https://nalinsharma.typeform.com/to/oL4xoLAS"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Book a Discovery Call
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
                 <Button
                   size="lg"
