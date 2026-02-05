@@ -30,9 +30,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Resolve base path
+        run: |
+          if [ -n "${{ vars.BASE_PATH }}" ]; then
+            echo "BASE_PATH=${{ vars.BASE_PATH }}" >> "$GITHUB_ENV"
+          else
+            echo "BASE_PATH=/${{ github.event.repository.name }}/" >> "$GITHUB_ENV"
+          fi
+
       - name: Build
-        env:
-          BASE_PATH: /nalinhomes/
         run: npm run build
 
       - name: Upload artifact
