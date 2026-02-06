@@ -35,7 +35,7 @@ jobs:
           if [ -n "${{ vars.BASE_PATH }}" ]; then
             echo "BASE_PATH=${{ vars.BASE_PATH }}" >> "$GITHUB_ENV"
           else
-            echo "BASE_PATH=/${{ github.event.repository.name }}/" >> "$GITHUB_ENV"
+            echo "BASE_PATH=/" >> "$GITHUB_ENV"
           fi
 
       - name: Build
