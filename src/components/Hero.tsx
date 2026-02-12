@@ -125,7 +125,7 @@ export const Hero = () => {
               icon: Target,
               value: "Over 90%",
               label: "Referral-based Business",
-              subtitle: "Happy clients bring business"
+              subtitle: "Happy clients bring puppies"
             }, {
               icon: Clock,
               value: "2–3 Months",
