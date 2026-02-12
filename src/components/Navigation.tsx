@@ -28,7 +28,8 @@ export const Navigation = () => {
 
   const navLinks = [
     { to: "/", label: "For Buyers" },
-    { to: "/sellers", label: "For Sellers" },
+    // Temporarily hidden from nav
+    // { to: "/sellers", label: "For Sellers" },
   ];
 
   return (
