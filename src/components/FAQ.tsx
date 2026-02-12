@@ -29,6 +29,10 @@ const faqs = [
   {
     question: "Will you be available to answer my questions?",
     answer: "Absolutely. I pride myself on being accessible to my clients. Whether it's a quick text, a phone call, or an in-person meeting, I'm here to support you throughout the entire journey and even after you've moved in."
+  },
+  {
+    question: "Are there incentives for first-time home buyers in Ontario?",
+    answer: "Yes, there are several programs that can reduce your upfront costs, such as the First-Time Home Buyer Incentive, RRSP Home Buyers' Plan, and land transfer tax rebates. I'll walk you through what you may qualify for and coordinate with your mortgage and legal team so you can take full advantage of them."
   }
 ];
 
