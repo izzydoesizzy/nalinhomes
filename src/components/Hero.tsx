@@ -120,16 +120,16 @@ export const Hero = () => {
               icon: Star,
               value: "60+",
               label: "5-Star Reviews",
-              subtitle: "Real stories from happy clients"
+              subtitle: "Real stories from real clients"
             }, {
               icon: Target,
               value: "Over 90%",
               label: "Referral-based Business",
-              subtitle: "Happy clients bring puppies"
+              subtitle: "Happy clients refer friends"
             }, {
               icon: Clock,
-              value: "2–3 Months",
-              label: "Avg to Get the Keys",
+              value: "3-4 Months",
+              label: "Avg Time to Accepted Offer",
               subtitle: "Focused, efficient, and stress-free"
             }].map((stat, index) => {
               const Icon = stat.icon;
