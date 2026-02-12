@@ -17,8 +17,8 @@ export const StressTransformation = () => {
     stress: "Worried About Missing Red Flags",
     transformation: "Every Detail Scrutinized",
     description: "With Sherlock-level investigation, Nalin spots issues you'd never consider in order to protect your best interests.",
-    testimonial: "With Sherlock-level investigation, Nalin spots issues you'd never consider in order to protect your best interests. Never rushed, always helpful, and he pointed out red flags I wouldn't have noticed.",
-    author: "Massimo",
+    testimonial: "He always pointed out important things that as a new prospective homeowner I had no idea about (but were super important).",
+    author: "Shel",
     color: {
       gradient: 'from-blue-500 to-cyan-600',
       icon: 'text-blue-500'
@@ -39,8 +39,8 @@ export const StressTransformation = () => {
     stress: "Feeling Alone in the Process",
     transformation: "Supported Every Single Step",
     description: "You'll have an advisor who's genuinely invested in your journey, not just the commission.",
-    testimonial: "Nalin is caring, genuine, and always has our best interests in mind.",
-    author: "Gregor",
+    testimonial: "I felt like I had a friend on the journey and not an agent out to make a sale. He truly will have your best-interest at heart!",
+    author: "Barbara",
     color: {
       gradient: 'from-emerald-500 to-teal-600',
       icon: 'text-emerald-500'
