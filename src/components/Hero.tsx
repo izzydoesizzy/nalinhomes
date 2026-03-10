@@ -74,7 +74,12 @@ export const Hero = () => {
                   variant="outline"
                   className="border-primary-foreground/50 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground font-semibold text-lg px-8 py-6"
                 >
-                  Resources
+                  <a
+                    href="https://docs.google.com/document/d/1OHOUnGRiAcLMd-IzZo3yRUKmphxp-VRpCem71cfcuhY/edit?usp=drive_link"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                   Resources
                 </Button>
               </div>
             </div>
