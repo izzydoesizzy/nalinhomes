@@ -80,6 +80,7 @@ export const Hero = () => {
                     rel="noreferrer"
                   >
                    Resources
+                  </a>
                 </Button>
               </div>
             </div>
