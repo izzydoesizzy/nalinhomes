@@ -8,7 +8,7 @@ import {
 const faqs = [
   {
     question: "How much do I need for a down payment?",
-    answer: "In Canada, the minimum down payment depends on the purchase price. For homes under $500,000, you need at least 5%. For homes between $500,000-$1M, it's 5% on the first $500K and 10% on the remainder. I'll help you understand all your options and find programs that might help with your down payment."
+    answer: "For homes priced at $500,000 or less, you need 5%. For homes between $500,000 and $1.5 million, it's 5% on the first $500,000 and 10% on the remainder. For homes $1.5 million and above, a minimum of 20% is required."
   },
   {
     question: "What are the total costs of buying a home?",
