@@ -27,9 +27,8 @@ export const Navigation = () => {
   };
 
   const navLinks = [
-    { to: "/", label: "For Buyers" },
-    // Temporarily hidden from nav
-    // { to: "/sellers", label: "For Sellers" },
+    { to: "/", label: "For Buyers", external: false },
+    { to: "https://sellers.nalinsharma.com", label: "For Sellers", external: true },
   ];
 
   return (
@@ -57,19 +56,31 @@ export const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`text-sm font-medium transition-colors hover:text-accent ${
-                  location.pathname === link.to
-                    ? "text-accent"
-                    : isScrolled ? "text-foreground" : "text-white"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.to}
+                  href={link.to}
+                  className={`text-sm font-medium transition-colors hover:text-accent ${
+                    isScrolled ? "text-foreground" : "text-white"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className={`text-sm font-medium transition-colors hover:text-accent ${
+                    location.pathname === link.to
+                      ? "text-accent"
+                      : isScrolled ? "text-foreground" : "text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
             <Button 
               onClick={scrollToContact} 
               size="sm" 
@@ -95,20 +106,31 @@ export const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-md">
             <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-sm font-medium transition-colors hover:text-primary px-4 py-2 ${
-                    location.pathname === link.to
-                      ? "text-primary"
-                      : "text-foreground"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.to}
+                    href={link.to}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-sm font-medium transition-colors hover:text-primary px-4 py-2 text-foreground"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`text-sm font-medium transition-colors hover:text-primary px-4 py-2 ${
+                      location.pathname === link.to
+                        ? "text-primary"
+                        : "text-foreground"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                )
+              )}
               <div className="px-4">
                 <Button onClick={scrollToContact} className="w-full">
                   Contact
